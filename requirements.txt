@@ -1,0 +1,8 @@
+yfinance>=0.2.30
+transformers>=4.37.2
+torch>=2.0.0
+pandas>=2.0.0
+numpy>=1.23.0
+scikit-learn>=1.2.0
+tenacity>=8.2.2
+tqdm>=4.66.1
