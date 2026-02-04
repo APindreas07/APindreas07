@@ -1,0 +1,27 @@
+{
+  "name": "axs-trading-windows",
+  "version": "1.0.0",
+  "description": "AXS Capital Partners Trading App",
+  "author": "AXS Capital Partners",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.axscapital.trading",
+    "productName": "AXS Trading",
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    },
+    "portable": {
+      "artifactName": "AXS-Trading.exe"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1"
+  }
+}
