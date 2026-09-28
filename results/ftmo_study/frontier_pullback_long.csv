@@ -1,0 +1,8 @@
+risk per trade,breached,months traded,final balance,avg month (compounded),best month,worst month,months >= 7%,max drawdown %,trades,system
+0.5%,no,96,10499.779082696668,0.05081407702705043,2.6291171953333192,-1.3941352660064465,0,4.79012842794103,100,"Best out-of-sample (hindsight) = Original pullback, long only"
+1%,no,96,11057.908591388887,0.10480570429269864,5.457683262126434,-2.9535877647284603,0,9.509245950697135,100,"Best out-of-sample (hindsight) = Original pullback, long only"
+2%,no,96,9098.032678170543,-0.09841705117924482,4.36736753704372,-4.019818401986774,0,10.980825376012348,15,"Best out-of-sample (hindsight) = Original pullback, long only"
+3%,no,96,9097.586186204611,-0.09846812258814674,4.387932408705719,-6.061732168978429,0,11.093303317403311,14,"Best out-of-sample (hindsight) = Original pullback, long only"
+5%,no,96,9099.14857668712,-0.09828942140835961,0.0,-4.764956476814408,0,10.463042113987047,6,"Best out-of-sample (hindsight) = Original pullback, long only"
+8%,no,96,9099.14857668712,-0.09828942140835961,0.0,-4.764956476814408,0,10.463042113987047,6,"Best out-of-sample (hindsight) = Original pullback, long only"
+10%,no,96,9099.14857668712,-0.09828942140835961,0.0,-4.764956476814408,0,10.463042113987047,6,"Best out-of-sample (hindsight) = Original pullback, long only"

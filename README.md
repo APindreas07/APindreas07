@@ -30,7 +30,8 @@ pip install pandas numpy matplotlib
 python eur_usd_backtest.py --throttle-below 9500 --out results   # one backtest: trades log, chart, scorecard
 python -m fxbot.research                                         # full study -> results/REPORT.md
 python -m fxbot.research --h1 EURUSD_H1.csv --h1-tz Europe/Athens  # add the 1H confirmation (MT5 export)
-python tests/test_engine.py                                      # engine checks
+python -m fxbot.ftmo_study                                       # FTMO 2-Step $10k study -> results/ftmo_study/REPORT.md
+python tests/test_engine.py && python tests/test_ftmo.py         # engine and FTMO-rule checks
 ```
 
-See `results/REPORT.md` for the latest findings.
+See `results/REPORT.md` (strategy research) and `results/ftmo_study/REPORT.md` (FTMO 2-Step rules, compounding, risk frontier and lifecycle simulation) for the latest findings.
