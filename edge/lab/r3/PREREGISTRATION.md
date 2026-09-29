@@ -76,3 +76,16 @@ The owner set conservative risk limits for deployment: 1% risk per trade, 5x max
 drawdown kill switch. Criterion 5 therefore becomes **stricter**: at the leverage that gives 26.8% a year, the
 out-of-sample maximum drawdown must be <= **10%** (was 30%), and that leverage must be <= **5x**. Criteria 1-4
 and 6 are unchanged. The report states the monthly return reachable within the limits.
+
+## Amendment 2 (2026-09-29, before any round-3 strategy test was run)
+- **Data source.** Dukascopy throttled this connection to about 2 files per 10 minutes, which made the download
+  impossible. The owner approved **HistData.com** free 1-minute **bid** bars instead, downloaded by
+  `tools/histdata.py` and aggregated to 5-minute bars.
+- **Timestamps.** HistData labels its files "EST", but its timestamps were found to be New York local time
+  **with** daylight saving. After converting on that basis, USDJPY on 2019-01-15 and 2019-06-03 matches the
+  Dukascopy bid exactly (median difference 0.0 pip on both days).
+- **Asks and costs.** HistData has no ask prices, so each ask is set to the bid + the retail spread table.
+  Buys therefore pay exactly the table spread, which is what the original rule required whenever the real spread
+  was below the table. That was almost always the case: the Dukascopy USDJPY median in London hours was
+  0.2 pip, against 1.2 in the table. Commission and slippage are unchanged at 0.45 pip per side.
+- **Nothing else changes.** Hypotheses, parameters, periods and criteria are as before.

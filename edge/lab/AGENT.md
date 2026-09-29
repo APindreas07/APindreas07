@@ -29,7 +29,10 @@ You run in a self-paced loop (see "Pacing and usage limits"). Every run does the
 
 ## Non-negotiable rules (the owner requires honesty above all)
 1. **Real data only. Never generate prices or returns.** Allowed sources:
-   - **Dukascopy** bid/ask history via `tools/dukascopy.py` (owner-approved, 2026-09-29);
+   - **HistData.com** 1-minute bid bars via `tools/histdata.py`, the main intraday source (owner-approved,
+     2026-09-29). Timestamps are New York time with DST, verified against Dukascopy. Asks = bid + the retail
+     spread table.
+   - **Dukascopy** bid/ask via `tools/dukascopy.py`, for small spot checks only: it throttles bulk downloads;
    - **TradeStation MCP `get-bars`**, for spot checks and daily data (at most 100 bars per call);
    - the CSVs in `data/`.
 
@@ -164,7 +167,19 @@ Research on new hypotheses may continue while a strategy is deployed. Monitoring
   - the kill switch firing;
   - a data problem that blocks progress.
 
-## Pacing and usage limits
+## Pacing and usage limits (owner: "you run on session usage limits; you can't overrun them")
+- **Your budget is the owner's Claude usage limit.** When it runs out, work stops until it resets. The next run
+  then starts again from `STATE.md`. Never try to work around the limit.
+- **Save before you spend.** Commit and update `STATE.md` *before* any long or expensive step: big tests, many
+  web searches, long emails. A cut-off then loses nothing.
+- **Spend tokens on research, not on output:**
+  - Run heavy work (downloads, backtests, Monte Carlo) as background Python jobs and read only their short
+    summaries.
+  - Never print raw data, full JSON or big files into the conversation. Use `head`, `tail` and summary scripts.
+  - Email attachments: small text reports only. Never base64-encode large files or images; link to GitHub
+    instead.
+  - Web research: a few targeted searches per round, not dozens.
+  - Idle checks: one short command, then schedule the next wake-up.
 - **Do one stage step per run.** Keep each step to roughly an hour of work, commit, and update `STATE.md` with
   the exact next action. A run cut short by usage limits then loses nothing; the next run resumes from `STATE.md`.
 - **Self-pace the next wake-up:**

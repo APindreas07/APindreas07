@@ -6,13 +6,13 @@
 - **email_thread_id:** 1a0eec446c2c9ba9
 - **last_report_number:** 1 (sent 2026-09-29)
 - **next_action:**
-  1. Download the 7 majors, 2012 .. 2026-09-25, with `tools/dukascopy.py` at the gentle pace (2 threads). It
-     resumes automatically.
-  2. Then run `python -m edge.lab.r3.research`.
-  3. Check the engine against an explicit loop.
-  4. Write `edge/lab/r3/REPORT.md` and add the ledger rows.
+  1. When the HistData download has finished (log: `%TEMP%\claude\histdata.log`, last line "DONE"), check
+     coverage and commit `data/histdata_MANIFEST.csv`.
+  2. Run `python -m edge.lab.r3.research` in the background.
+  3. Check the engine against an explicit loop on one pair.
+  4. Write `edge/lab/r3/REPORT.md`, add the ledger rows, and email report #2.
 - **notes:**
-  - Dukascopy throttled an 8-thread burst on 2026-09-29 (HTTP 503). Keep it at 2 threads with the built-in
-    pacing.
-  - Git on the owner's PC needs a one-time GitHub sign-in before pushes work (see LOCAL.md). Until then, commit
-    locally.
+  - Dukascopy was abandoned for bulk data (throttled to about 2 files per 10 minutes). The owner chose HistData
+    (option 1, 2026-09-29).
+  - HistData timestamps are New York time **with** DST (verified against Dukascopy). `tools/histdata.py`
+    handles it.

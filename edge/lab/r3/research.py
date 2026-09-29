@@ -19,7 +19,7 @@ import pandas as pd
 from edge.lab.dsr import deflated_sharpe
 
 ROOT = Path(__file__).resolve().parents[3]
-DATA = ROOT / "data" / "dukascopy"
+DATA = ROOT / "data" / "histdata"
 CACHE = DATA / "_cache"
 OUT = Path(__file__).resolve().parent / "results"
 
@@ -45,6 +45,8 @@ LONDON = "Europe/London"
 # ---------------------------------------------------------------- data
 
 def load_pair(pair: str) -> pd.DataFrame:
+    """5-minute bars for one pair from HistData (bid only; amendment 2). The ask is set to bid + the retail spread
+    table, which is exactly the charge the pre-registration requires when the real spread is below the table."""
     CACHE.mkdir(parents=True, exist_ok=True)
     c = CACHE / f"{pair}.pkl"
     files = sorted((DATA / pair).glob("*.csv.gz"))
@@ -52,6 +54,9 @@ def load_pair(pair: str) -> pd.DataFrame:
         return pd.read_pickle(c)
     df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
     df["ts"] = pd.to_datetime(df["ts"], utc=True)
+    j = PAIRS.index(pair)
+    df["ao"] = df["bo"] + TABLE[j] * PIP[j]
+    df["ac"] = df["bc"] + TABLE[j] * PIP[j]
     df = df[df.ts < LAST + pd.Timedelta(days=1)].drop_duplicates("ts").sort_values("ts").reset_index(drop=True)
     df.to_pickle(c)
     return df

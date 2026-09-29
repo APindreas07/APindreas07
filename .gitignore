@@ -3,3 +3,4 @@ __pycache__/
 
 # Dukascopy intraday history (large; reproducible via tools/dukascopy.py, hashes in data/dukascopy_MANIFEST.csv)
 data/dukascopy/
+data/histdata/
