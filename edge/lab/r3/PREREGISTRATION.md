@@ -70,3 +70,9 @@ Parameter Monte Carlo sets are drawn uniformly from the full ranges, with steps 
 
 Random numbers are used only to pick parameter sets and to resample real returns. No prices or returns are
 generated.
+
+## Amendment 1 (2026-09-29, before any round-3 data was downloaded or any test run)
+The owner set conservative risk limits for deployment: 1% risk per trade, 5x maximum leverage and a -10%
+drawdown kill switch. Criterion 5 therefore becomes **stricter**: at the leverage that gives 26.8% a year, the
+out-of-sample maximum drawdown must be <= **10%** (was 30%), and that leverage must be <= **5x**. Criteria 1-4
+and 6 are unchanged. The report states the monthly return reachable within the limits.

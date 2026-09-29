@@ -39,19 +39,34 @@ def point(pair: str) -> float:
     return 1e-3 if pair.endswith("JPY") else 1e-5
 
 
+RAW = OUT / "_raw"
+PACE = 0.25          # seconds between requests per thread; Dukascopy throttles bursts per IP with HTTP 503
+
+
 def fetch(pair: str, day: dt.date, side: str) -> bytes:
+    """Fetch one day file, caching the raw bytes so an interrupted download resumes where it stopped."""
+    cache = RAW / pair / f"{day.isoformat()}_{side}.bi5"
+    if cache.exists():
+        return cache.read_bytes()
     url = URL.format(pair=pair, y=day.year, m0=day.month - 1, d=day.day, side=side)   # month is 0-based
-    for attempt in range(6):
+    for attempt in range(10):
         try:
+            time.sleep(PACE)
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
-                return r.read()
+                data = r.read()
+            break
         except urllib.error.HTTPError as e:
             if e.code == 404:
-                return b""
-            time.sleep(2 ** attempt)
+                data = b""
+                break
+            time.sleep(min(5 * 2 ** attempt, 300))
         except Exception:
-            time.sleep(2 ** attempt)
-    raise RuntimeError(f"failed after retries: {url}")
+            time.sleep(min(5 * 2 ** attempt, 300))
+    else:
+        raise RuntimeError(f"failed after retries: {url}")
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    cache.write_bytes(data)
+    return data
 
 
 def decode(raw: bytes, pair: str, day: dt.date) -> pd.DataFrame:
@@ -99,7 +114,7 @@ def download_year(pair: str, year: int, last: dt.date, threads: int) -> Path | N
 
 def write_manifest():
     rows = []
-    for f in sorted(OUT.glob("*/*.csv.gz")):
+    for f in sorted(OUT.glob("[A-Z]*/*.csv.gz")):
         b = f.read_bytes()
         n = len(pd.read_csv(io.BytesIO(b), usecols=["ts"]))
         rows.append({"file": f.relative_to(ROOT).as_posix(), "rows": n, "sha256": hashlib.sha256(b).hexdigest()})
@@ -111,7 +126,7 @@ def main():
     ap.add_argument("--pairs", nargs="+", required=True)
     ap.add_argument("--start", type=int, required=True)
     ap.add_argument("--end", required=True, help="last date, YYYY-MM-DD")
-    ap.add_argument("--threads", type=int, default=8)
+    ap.add_argument("--threads", type=int, default=2)
     ap.add_argument("--force", action="store_true")
     a = ap.parse_args()
     last = dt.date.fromisoformat(a.end)
