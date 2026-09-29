@@ -143,6 +143,27 @@ a new trial and is tested with the same criteria.
 
 Research on new hypotheses may continue while a strategy is deployed. Monitoring always comes first on each run.
 
+## Email reports to the owner (owner's request, 2026-09-29)
+- **When.** After **every run that makes progress**, meaning anything except a "still waiting" check, email a
+  report to **axscapitalpartners@gmail.com** with the Gmail tool.
+  - Reply in the existing thread, `replyThreadId` = `email_thread_id` in `STATE.md`.
+  - Number the reports; `last_report_number` in `STATE.md` holds the latest one.
+- **Format.** Plain text only, with no Markdown symbols, in these sections:
+  - SHORT VERSION;
+  - WHAT WAS DONE THIS STEP;
+  - RESULTS SO FAR (honest, with numbers);
+  - CURRENT PROGRESS;
+  - WHERE WE ARE HEADING;
+  - ANYTHING YOU NEED TO DO.
+- **Attachments.** Attach any new or updated report files, such as `edge/lab/rN/REPORT.md` or
+  `edge/lab/deploy/PLAN.md`, base64-encoded. For charts, link to GitHub instead of attaching large images.
+- **Send immediately**, without waiting for the next run, when any of these happens:
+  - a validation pass or fail;
+  - a deployment;
+  - a SIM order problem;
+  - the kill switch firing;
+  - a data problem that blocks progress.
+
 ## Pacing and usage limits
 - **Do one stage step per run.** Keep each step to roughly an hour of work, commit, and update `STATE.md` with
   the exact next action. A run cut short by usage limits then loses nothing; the next run resumes from `STATE.md`.

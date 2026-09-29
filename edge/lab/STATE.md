@@ -3,6 +3,8 @@
 - **stage:** DATA (round 3)
 - **halted:** false (kill switch not triggered)
 - **deployed:** none
+- **email_thread_id:** 1a0eec446c2c9ba9
+- **last_report_number:** 1 (sent 2026-09-29)
 - **next_action:**
   1. Download the 7 majors, 2012 .. 2026-09-25, with `tools/dukascopy.py` at the gentle pace (2 threads). It
      resumes automatically.
