@@ -1,0 +1,303 @@
+{
+  "spy_splice_max_abs_diff": 0.0,
+  "E1": {
+    "market": "SPY daily",
+    "rule": "RSI(2)<10 & close>SMA200, exit close>SMA5, next-open fills",
+    "blocks": {
+      "pre": {
+        "net": 0.08884706699977696,
+        "n": 43,
+        "win": 0.7209302325581395,
+        "avg": 0.0020583178328485736
+      },
+      "post": {
+        "net": 0.46257213013319776,
+        "n": 117,
+        "win": 0.7094017094017094,
+        "avg": 0.003404149155328499
+      },
+      "holdout": {
+        "net": 0.2063122016227572,
+        "n": 32,
+        "win": 0.78125,
+        "avg": 0.00592280169915352
+      }
+    },
+    "full_net": 0.9210731397588938,
+    "t_edge": 2.0374621796233714,
+    "neighbours": {
+      "RSI<5/SMA3": 0.2928710146117517,
+      "RSI<5/SMA5": 0.538604116357259,
+      "RSI<5/SMA10": 0.3635791669552708,
+      "RSI<10/SMA3": 0.5737087906433085,
+      "RSI<10/SMA5": 0.9210731397588938,
+      "RSI<10/SMA10": 0.9656431626907875,
+      "RSI<15/SMA3": 0.795888494343777,
+      "RSI<15/SMA5": 1.4952470531922,
+      "RSI<15/SMA10": 1.4809528016880393,
+      "RSI<20/SMA3": 0.5846702494950864,
+      "RSI<20/SMA5": 1.3169938276284658,
+      "RSI<20/SMA10": 1.274485879302318,
+      "RSI<25/SMA3": 0.7584990254259212,
+      "RSI<25/SMA5": 1.739789445075416,
+      "RSI<25/SMA10": 1.6007043586963348
+    },
+    "confirm": {
+      "net": 1.1572562685382142,
+      "t": 1.1476557998639279,
+      "n": 199
+    },
+    "extra": {
+      "trades": 192,
+      "days_in_market_pct": 0.09585185185185185,
+      "avg_trade_net": 0.0035225144393689362,
+      "win_rate": 0.7239583333333334
+    },
+    "checks": {
+      "every_block_positive": true,
+      "t_ge_2": true,
+      "all_neighbours_positive": true,
+      "qqq_confirms": false,
+      "PASS": false
+    }
+  },
+  "E2": {
+    "market": "SPY daily",
+    "rule": "long close of day -2 to close of day +3",
+    "blocks": {
+      "pre": {
+        "net": 0.19153019045080022,
+        "n": 109,
+        "win": 0.5321100917431193,
+        "avg": 0.0018678393042920504
+      },
+      "post": {
+        "net": 0.4630549977430871,
+        "n": 180,
+        "win": 0.5666666666666667,
+        "avg": 0.002335312761694471
+      },
+      "holdout": {
+        "net": 0.0839550250414911,
+        "n": 32,
+        "win": 0.5625,
+        "avg": 0.0026661608279620348
+      }
+    },
+    "full_net": 0.8896308292244657,
+    "t_edge": 1.0434652483830384,
+    "neighbours": {
+      "entry-3/exit+2": 1.3298473410220426,
+      "entry-3/exit+3": 1.6143829939865384,
+      "entry-3/exit+4": 1.7697849033007467,
+      "entry-2/exit+2": 0.6839729744312453,
+      "entry-2/exit+3": 0.8896308292244657,
+      "entry-2/exit+4": 1.0019581539969211,
+      "entry-1/exit+2": 0.7527571658809669,
+      "entry-1/exit+3": 0.9668141037513933,
+      "entry-1/exit+4": 1.0837261444247175
+    },
+    "confirm": {
+      "net": 1.1408546464085538,
+      "t": 0.5034299992412197,
+      "n": 284
+    },
+    "extra": {
+      "trades": 321,
+      "days_in_market_pct": 0.1902222222222222,
+      "avg_trade_net": 0.002209557407375774,
+      "win_rate": 0.5545171339563862
+    },
+    "checks": {
+      "every_block_positive": true,
+      "t_ge_2": false,
+      "all_neighbours_positive": true,
+      "qqq_confirms": false,
+      "PASS": false
+    }
+  },
+  "E3": {
+    "market": "SPY daily",
+    "rule": "long close->next open every day",
+    "blocks": {
+      "pre": {
+        "net": -0.5134453957277814,
+        "n": 2289,
+        "gross": 0.21570196015784693
+      },
+      "post": {
+        "net": -0.4845348931508837,
+        "n": 3774,
+        "gross": 1.3324440343053383
+      },
+      "holdout": {
+        "net": 0.08046999383404474,
+        "n": 686,
+        "gross": 0.4215042707138945
+      }
+    },
+    "full_net": -0.7290160498780871,
+    "t_edge": -1.1004582064681214,
+    "neighbours": {},
+    "confirm": {
+      "net": 0.14632160800687832,
+      "t": -2.0408804479593954,
+      "n": 5980
+    },
+    "extra": {
+      "mean_overnight_gross_bp": 2.3131422483987203,
+      "mean_close_close_bp": 3.2526021954472144,
+      "cost_per_day_bp": 4.0,
+      "t_gross_overnight_vs_zero": 2.7095528425408144
+    },
+    "checks": {
+      "every_block_positive": false,
+      "t_ge_2": false,
+      "qqq_confirms": false,
+      "PASS": false
+    }
+  },
+  "E4": {
+    "market": "SPY monthly",
+    "rule": "long if month-end close > 10-month SMA else cash (0%)",
+    "blocks": {
+      "pre": {
+        "net": 2.110720100576837,
+        "n": 167,
+        "buy_hold": 2.032144338448773
+      },
+      "post": {
+        "net": 1.776920794959206,
+        "n": 192,
+        "buy_hold": 2.25087203337665
+      },
+      "holdout": {
+        "net": 0.39109094603402417,
+        "n": 33,
+        "buy_hold": 0.6228356230670513
+      }
+    },
+    "full_net": 11.01655427056716,
+    "t_edge": 4.411115093749547,
+    "neighbours": {},
+    "confirm": null,
+    "extra": {
+      "months": 392,
+      "switches": 48,
+      "t_vs_buy_hold": -0.7773018500625003,
+      "maxdd": -0.23547640530962644,
+      "maxdd_buy_hold": -0.5219527966375688,
+      "buy_hold_full": 14.996474491912048,
+      "pct_months_invested": 0.7576530612244898
+    },
+    "checks": {
+      "every_block_positive": true,
+      "t_ge_2": true,
+      "PASS": true
+    }
+  },
+  "E5": {
+    "market": "18 markets monthly",
+    "rule": "sign of 12m return, 10% vol target per market (12m of monthly returns), equal risk",
+    "blocks": {
+      "pre": {
+        "net": 0.32629341191825545,
+        "n": 122,
+        "ann_ret": 0.029580495627693125,
+        "ann_vol": 0.05977192189509019
+      },
+      "post": {
+        "net": 0.18557908059004014,
+        "n": 132,
+        "ann_ret": 0.016802602361218118,
+        "ann_vol": 0.05156029412112449
+      },
+      "holdout": {
+        "net": 0.14732691677118392,
+        "n": 33,
+        "ann_ret": 0.0511801862539635,
+        "ann_vol": 0.047747234424733775
+      }
+    },
+    "full_net": 0.8040863576477737,
+    "t_edge": 2.340484767838348,
+    "neighbours": {
+      "lookback3": 0.5136706007264764,
+      "lookback6": 0.632004944158681,
+      "lookback12": 0.8040863576477737
+    },
+    "confirm": null,
+    "extra": {
+      "gross_exposure_avg": 0.9353453306103982,
+      "markets_avg": 17.14236111111111,
+      "cost_drag_ann": 0.0008799215892337552,
+      "start": "2002-11",
+      "end": "2026-09",
+      "months": 287,
+      "ann_ret": 0.026187143291429085,
+      "ann_vol": 0.054718304377948335,
+      "sharpe_ann": 0.4785810450292862,
+      "maxdd": -0.13672472793412638,
+      "with_3pct_cfd_financing_full_net": -0.0770672667425294,
+      "t_with_financing": -0.16789640364100675
+    },
+    "checks": {
+      "every_block_positive": true,
+      "t_ge_2": true,
+      "all_neighbours_positive": true,
+      "PASS": true
+    }
+  },
+  "E6": {
+    "market": "7 FX majors monthly",
+    "rule": "sign of 12m return, 10% vol target per market (12m of monthly returns), equal risk",
+    "blocks": {
+      "pre": {
+        "net": 0.22663542190002217,
+        "n": 122,
+        "ann_ret": 0.023147794455427667,
+        "ann_vol": 0.07852048110351781
+      },
+      "post": {
+        "net": -0.0008909784161159617,
+        "n": 132,
+        "ann_ret": 0.002020114225092507,
+        "ann_vol": 0.06510557216405187
+      },
+      "holdout": {
+        "net": -0.08232249812016312,
+        "n": 33,
+        "ann_ret": -0.0291838583216925,
+        "ann_vol": 0.06425257753559692
+      }
+    },
+    "full_net": 0.12465279472740498,
+    "t_edge": 0.5109464397786387,
+    "neighbours": {
+      "lookback3": 0.19935450236548835,
+      "lookback6": 0.17764331536334632,
+      "lookback12": 0.12465279472740498
+    },
+    "confirm": null,
+    "extra": {
+      "gross_exposure_avg": 1.1844642776430467,
+      "markets_avg": 7.0,
+      "cost_drag_ann": 0.0003490884750566944,
+      "start": "2002-11",
+      "end": "2026-09",
+      "months": 287,
+      "ann_ret": 0.007413305493583749,
+      "ann_vol": 0.07095562751742047,
+      "sharpe_ann": 0.10447804850663454,
+      "maxdd": -0.2848861276758844,
+      "with_3pct_cfd_financing_full_net": -0.5193694154203994,
+      "t_with_financing": -1.9392233650163155
+    },
+    "checks": {
+      "every_block_positive": false,
+      "t_ge_2": false,
+      "all_neighbours_positive": true,
+      "PASS": false
+    }
+  }
+}

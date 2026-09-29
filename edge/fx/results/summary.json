@@ -1,0 +1,536 @@
+{
+  "data": {
+    "pairs": [
+      "EURUSD",
+      "GBPUSD",
+      "USDJPY",
+      "AUDUSD",
+      "USDCAD",
+      "USDCHF",
+      "NZDUSD"
+    ],
+    "first": "2006-10-09",
+    "last": "2026-09-25",
+    "bars": 5181
+  },
+  "families": {
+    "F1": {
+      "name": "MA trend",
+      "chosen_params": {
+        "2017": [
+          30,
+          50
+        ],
+        "2018": [
+          20,
+          150
+        ],
+        "2019": [
+          30,
+          50
+        ],
+        "2020": [
+          75,
+          300
+        ],
+        "2021": [
+          30,
+          75
+        ],
+        "2022": [
+          30,
+          75
+        ],
+        "2023": [
+          100,
+          250
+        ],
+        "2024": [
+          100,
+          200
+        ],
+        "2025": [
+          100,
+          200
+        ],
+        "2026": [
+          5,
+          100
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.012905139079791628,
+        "ann_vol": 0.05792687490224877,
+        "sharpe": -0.19527165016774284,
+        "max_dd": -0.15633393993965183,
+        "total_return": -0.08926302607376413
+      },
+      "oos_swap_adjusted_ann_return": -0.03979339220693687,
+      "avg_gross_exposure_oos": 1.3444126563572618,
+      "holdout_2024_2026": {
+        "ann_return": -0.08105882598612602,
+        "ann_vol": 0.06396210750738822,
+        "sharpe": -1.2894144995477443,
+        "max_dd": -0.24135951212893958,
+        "total_return": -0.21298710605594984
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": 0.015395917846074969,
+        "ann_vol": 0.048609042665970076,
+        "sharpe": 0.3386392167486689,
+        "max_dd": -0.11917720669796728,
+        "total_return": 0.15208068382137663
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.1421,
+        "median_oos_sharpe": -0.17086819088088384,
+        "p05_oos_sharpe": -0.44182004571059985,
+        "p95_oos_sharpe": 0.10379201850425357,
+        "frac_hold_sharpe_pos": 0.0,
+        "median_hold_sharpe": -1.0341227947926548,
+        "frac_dev_sharpe_pos": 0.9219
+      },
+      "return_mc": {
+        "n": 10000,
+        "block": 20,
+        "p05_ann_return": -0.041074750640967626,
+        "median_ann_return": -0.010562792100452505,
+        "p95_ann_return": 0.020662760253119077,
+        "prob_loss_over_oos": 0.7136
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true
+      },
+      "validated": false
+    },
+    "F2": {
+      "name": "TS momentum",
+      "chosen_params": {
+        "2017": [
+          40
+        ],
+        "2018": [
+          120
+        ],
+        "2019": [
+          40
+        ],
+        "2020": [
+          260
+        ],
+        "2021": [
+          260
+        ],
+        "2022": [
+          260
+        ],
+        "2023": [
+          260
+        ],
+        "2024": [
+          260
+        ],
+        "2025": [
+          260
+        ],
+        "2026": [
+          20
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.018865859413087382,
+        "ann_vol": 0.06132735143070486,
+        "sharpe": -0.2798995284642818,
+        "max_dd": -0.21527882495010253,
+        "total_return": -0.12811837649291435
+      },
+      "oos_swap_adjusted_ann_return": -0.045748261130464485,
+      "avg_gross_exposure_oos": 1.344120085868855,
+      "holdout_2024_2026": {
+        "ann_return": -0.03344116242300421,
+        "ann_vol": 0.059741216546037514,
+        "sharpe": -0.5394833455734656,
+        "max_dd": -0.11812054720403509,
+        "total_return": -0.09187247555931544
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": 0.007297474780270763,
+        "ann_vol": 0.051457312245490786,
+        "sharpe": 0.1670404298343464,
+        "max_dd": -0.12639532747626292,
+        "total_return": 0.06969327659544944
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0518,
+        "median_oos_sharpe": -0.22403834640771753,
+        "p05_oos_sharpe": -0.5025981975201248,
+        "p95_oos_sharpe": 0.004333605741459027,
+        "frac_hold_sharpe_pos": 0.017,
+        "median_hold_sharpe": -0.7275867691512854,
+        "frac_dev_sharpe_pos": 0.8348
+      },
+      "return_mc": {
+        "n": 10000,
+        "block": 20,
+        "p05_ann_return": -0.05244832455960318,
+        "median_ann_return": -0.018981363814038206,
+        "p95_ann_return": 0.018533130165251488,
+        "prob_loss_over_oos": 0.8011
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true
+      },
+      "validated": false
+    },
+    "F3": {
+      "name": "Donchian breakout",
+      "chosen_params": {
+        "2017": [
+          80,
+          80
+        ],
+        "2018": [
+          100,
+          50
+        ],
+        "2019": [
+          55,
+          55
+        ],
+        "2020": [
+          20,
+          20
+        ],
+        "2021": [
+          55,
+          55
+        ],
+        "2022": [
+          20,
+          20
+        ],
+        "2023": [
+          55,
+          27
+        ],
+        "2024": [
+          120,
+          120
+        ],
+        "2025": [
+          20,
+          10
+        ],
+        "2026": [
+          20,
+          20
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.024543018664654026,
+        "ann_vol": 0.06006279673920004,
+        "sharpe": -0.38369448962776503,
+        "max_dd": -0.20792178799844074,
+        "total_return": -0.1637895252072179
+      },
+      "oos_swap_adjusted_ann_return": -0.04932515145193164,
+      "avg_gross_exposure_oos": 1.2391066393638808,
+      "holdout_2024_2026": {
+        "ann_return": -0.045419350338495645,
+        "ann_vol": 0.0583380283326449,
+        "sharpe": -0.7675882198495466,
+        "max_dd": -0.17048825259400435,
+        "total_return": -0.12339803102366353
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": 0.008169516475284633,
+        "ann_vol": 0.05118514818658515,
+        "sharpe": 0.18455740618199085,
+        "max_dd": -0.1540979282963335,
+        "total_return": 0.07830479018334113
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0683,
+        "median_oos_sharpe": -0.16502205906489045,
+        "p05_oos_sharpe": -0.423179070329642,
+        "p95_oos_sharpe": 0.012818318884300635,
+        "frac_hold_sharpe_pos": 0.0,
+        "median_hold_sharpe": -0.7644367998789325,
+        "frac_dev_sharpe_pos": 0.8643
+      },
+      "return_mc": {
+        "n": 10000,
+        "block": 20,
+        "p05_ann_return": -0.057837757643821965,
+        "median_ann_return": -0.02392965037815698,
+        "p95_ann_return": 0.011903392893446194,
+        "prob_loss_over_oos": 0.8698
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true
+      },
+      "validated": false
+    },
+    "F4": {
+      "name": "Cross-sectional momentum",
+      "chosen_params": {
+        "2017": [
+          20,
+          5
+        ],
+        "2018": [
+          260,
+          21
+        ],
+        "2019": [
+          260,
+          21
+        ],
+        "2020": [
+          20,
+          5
+        ],
+        "2021": [
+          20,
+          5
+        ],
+        "2022": [
+          260,
+          10
+        ],
+        "2023": [
+          20,
+          5
+        ],
+        "2024": [
+          260,
+          5
+        ],
+        "2025": [
+          260,
+          5
+        ],
+        "2026": [
+          180,
+          21
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.01255254253049487,
+        "ann_vol": 0.025618090337502605,
+        "sharpe": -0.48027947985615244,
+        "max_dd": -0.0991202851665649,
+        "total_return": -0.08691863695495017
+      },
+      "oos_swap_adjusted_ann_return": -0.027844447860262585,
+      "avg_gross_exposure_oos": 0.7645952664883857,
+      "holdout_2024_2026": {
+        "ann_return": -0.0026725825349713794,
+        "ann_vol": 0.021941712878843594,
+        "sharpe": -0.11100522766480578,
+        "max_dd": -0.039612604587010214,
+        "total_return": -0.007553779783617709
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": 0.001460133295067667,
+        "ann_vol": 0.022344166696797937,
+        "sharpe": 0.07646073441087332,
+        "max_dd": -0.04644407288199848,
+        "total_return": 0.013611344180523677
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.1677,
+        "median_oos_sharpe": -0.3279858115079054,
+        "p05_oos_sharpe": -0.7923603680897187,
+        "p95_oos_sharpe": 0.16716115276664092,
+        "frac_hold_sharpe_pos": 0.3859,
+        "median_hold_sharpe": -0.10701012529291967,
+        "frac_dev_sharpe_pos": 0.5203
+      },
+      "return_mc": {
+        "n": 10000,
+        "block": 20,
+        "p05_ann_return": -0.027703983550602294,
+        "median_ann_return": -0.012492509512982291,
+        "p95_ann_return": 0.004185710876694907,
+        "prob_loss_over_oos": 0.8937
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true
+      },
+      "validated": false
+    },
+    "F5": {
+      "name": "Mean reversion (z-score)",
+      "chosen_params": {
+        "2017": [
+          20,
+          1.0
+        ],
+        "2018": [
+          20,
+          1.0
+        ],
+        "2019": [
+          5,
+          1.5
+        ],
+        "2020": [
+          20,
+          1.0
+        ],
+        "2021": [
+          20,
+          2.0
+        ],
+        "2022": [
+          10,
+          1.5
+        ],
+        "2023": [
+          10,
+          1.5
+        ],
+        "2024": [
+          40,
+          2.5
+        ],
+        "2025": [
+          40,
+          2.5
+        ],
+        "2026": [
+          10,
+          2.0
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.011467392017211475,
+        "ann_vol": 0.05091922938403208,
+        "sharpe": -0.20104948791831756,
+        "max_dd": -0.11633706088372164,
+        "total_return": -0.07967091294960138
+      },
+      "oos_swap_adjusted_ann_return": -0.02883783503126988,
+      "avg_gross_exposure_oos": 0.8685221507029204,
+      "holdout_2024_2026": {
+        "ann_return": 0.0027257140131033974,
+        "ann_vol": 0.04014130797906351,
+        "sharpe": 0.0878734143924528,
+        "max_dd": -0.05412099672001702,
+        "total_return": 0.007742167085053042
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": -0.002349586224466904,
+        "ann_vol": 0.0419173488763219,
+        "sharpe": -0.035182491257213656,
+        "max_dd": -0.11548220445390756,
+        "total_return": -0.0215607551023812
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.1594,
+        "median_oos_sharpe": -0.09730160604912858,
+        "p05_oos_sharpe": -0.30254745038051567,
+        "p95_oos_sharpe": 0.060044569788265875,
+        "frac_hold_sharpe_pos": 0.9036,
+        "median_hold_sharpe": 0.3067245221577979,
+        "frac_dev_sharpe_pos": 0.3574
+      },
+      "return_mc": {
+        "n": 10000,
+        "block": 20,
+        "p05_ann_return": -0.03672994325886575,
+        "median_ann_return": -0.010079921487752816,
+        "p95_ann_return": 0.01549116952986968,
+        "prob_loss_over_oos": 0.7413
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false
+      },
+      "validated": false
+    }
+  },
+  "validated": [],
+  "portfolio": {
+    "families": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "tradable": false,
+    "oos_2017_2023": {
+      "ann_return": -0.036718755561018224,
+      "ann_vol": 0.05426265682743049,
+      "sharpe": -0.6622402273527478,
+      "max_dd": -0.2405700188150076,
+      "total_return": -0.2360795420230012
+    },
+    "holdout_2024_2026": {
+      "ann_return": -0.05563473428505905,
+      "ann_vol": 0.052015107944753246,
+      "sharpe": -1.074374324227059,
+      "max_dd": -0.18470951634219712,
+      "total_return": -0.149717290478232
+    },
+    "full_2017_2026": {
+      "ann_return": -0.04209939178794275,
+      "ann_vol": 0.05363016540727999,
+      "sharpe": -0.7751082303020457,
+      "max_dd": -0.35543796417124274,
+      "total_return": -0.350451643132208
+    },
+    "swap_adjusted_ann_return_full": -0.09139112577930242,
+    "avg_gross_exposure": 2.4645866995679833,
+    "calendar_years": {
+      "2017": -0.06909626825400483,
+      "2018": -0.05211228279131486,
+      "2019": -0.0962136587760326,
+      "2020": 0.039964992442722114,
+      "2021": -0.06817198547606096,
+      "2022": 0.060447425681425804,
+      "2023": -0.06786873563638729,
+      "2024": -0.06919808576935138,
+      "2025": -0.04278788740669226,
+      "2026": -0.04567149840527607
+    },
+    "return_mc_full": {
+      "n": 10000,
+      "p05_ann_return": -0.06510365558450637,
+      "median_ann_return": -0.04068965883694563,
+      "p95_ann_return": -0.01611532955575478,
+      "prob_loss": 0.9961
+    },
+    "param_mc": {
+      "n": 10000,
+      "frac_oos_sharpe_pos": 0.0038,
+      "median_oos_sharpe": -0.38611147512842237,
+      "frac_hold_sharpe_pos": 0.0012,
+      "median_hold_sharpe": -0.8509268323299961,
+      "p05_ann_return": -0.04379357416344972,
+      "median_ann_return": -0.029868827416723975,
+      "p95_ann_return": -0.017002594779582172
+    }
+  }
+}

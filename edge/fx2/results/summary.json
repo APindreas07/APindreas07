@@ -1,0 +1,515 @@
+{
+  "data": {
+    "first": "2006-10-09",
+    "last": "2026-09-25",
+    "days": 5181,
+    "instruments": {
+      "majors": [
+        "EURUSD",
+        "GBPUSD",
+        "USDJPY",
+        "AUDUSD",
+        "USDCAD",
+        "USDCHF",
+        "NZDUSD"
+      ],
+      "crosses": [
+        "EURGBP",
+        "EURJPY",
+        "EURAUD",
+        "EURCAD",
+        "EURCHF",
+        "EURNZD",
+        "GBPJPY",
+        "GBPAUD",
+        "GBPCAD",
+        "GBPCHF",
+        "GBPNZD",
+        "JPYAUD",
+        "JPYCAD",
+        "JPYCHF",
+        "JPYNZD",
+        "AUDCAD",
+        "AUDCHF",
+        "AUDNZD",
+        "CADCHF",
+        "CADNZD",
+        "CHFNZD"
+      ]
+    }
+  },
+  "hypotheses": {
+    "G1": {
+      "name": "Cross-pair mean reversion (21 crosses)",
+      "chosen_params": {
+        "2017": [
+          60,
+          3.0
+        ],
+        "2018": [
+          60,
+          3.0
+        ],
+        "2019": [
+          60,
+          3.0
+        ],
+        "2020": [
+          60,
+          2.5
+        ],
+        "2021": [
+          60,
+          2.5
+        ],
+        "2022": [
+          60,
+          2.5
+        ],
+        "2023": [
+          10,
+          2.5
+        ],
+        "2024": [
+          10,
+          2.5
+        ],
+        "2025": [
+          60,
+          3.0
+        ],
+        "2026": [
+          60,
+          3.0
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": 0.0037077192449042062,
+        "monthly_return": 0.00030845277819713246,
+        "ann_vol": 0.0251153259422247,
+        "sharpe": 0.15991799837020138,
+        "max_dd": -0.05644826753560794,
+        "total_return": 0.02699836231332764
+      },
+      "oos_swap_adjusted_ann_return": -0.003156387625203653,
+      "holdout_2024_2026_seen_adjacent": {
+        "ann_return": 0.00030057669408312115,
+        "monthly_return": 2.5044607774082905e-05,
+        "ann_vol": 0.01773538406375217,
+        "sharpe": 0.025775348405140706,
+        "max_dd": -0.023928845781760244,
+        "total_return": 0.0008518686357059657
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": -0.002920594714706959,
+        "monthly_return": -0.00024370929587902435,
+        "ann_vol": 0.022144026547645017,
+        "sharpe": -0.12100970706500358,
+        "max_dd": -0.07965938219938284,
+        "total_return": -0.0267375060581716
+      },
+      "target_2pct_month": {
+        "oos_sharpe": 0.15991799837020138,
+        "leverage_for_2pct_month": 50.0,
+        "max_dd_at_that_leverage": -0.9987318131251928,
+        "leverage_at_20pct_dd": 3.7531800095080827,
+        "monthly_return_at_20pct_dd": 0.0008851776538085776,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.6911,
+        "median_oos_sharpe": 0.13188308671039795,
+        "p05_oos_sharpe": -0.25835073397766845,
+        "p95_oos_sharpe": 0.37486000317937146,
+        "frac_hold_sharpe_pos": 0.8823,
+        "frac_dev_sharpe_pos": 0.0534
+      },
+      "return_mc": {
+        "p05_ann_return": -0.011269633295747492,
+        "median_ann_return": 0.004235236061227285,
+        "p95_ann_return": 0.018502936187915528,
+        "prob_loss_over_oos": 0.3231
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": true,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false
+      },
+      "validated": false,
+      "meets_2pct_month": false
+    },
+    "G2": {
+      "name": "Short-term cross-sectional reversal",
+      "chosen_params": {
+        "2017": [
+          2,
+          5
+        ],
+        "2018": [
+          1,
+          3
+        ],
+        "2019": [
+          1,
+          3
+        ],
+        "2020": [
+          1,
+          3
+        ],
+        "2021": [
+          1,
+          3
+        ],
+        "2022": [
+          1,
+          3
+        ],
+        "2023": [
+          3,
+          5
+        ],
+        "2024": [
+          10,
+          5
+        ],
+        "2025": [
+          10,
+          5
+        ],
+        "2026": [
+          10,
+          5
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.014686609505727755,
+        "monthly_return": -0.001232200672782735,
+        "ann_vol": 0.024891045064918342,
+        "sharpe": -0.5819437349331865,
+        "max_dd": -0.11229850079847725,
+        "total_return": -0.10102881603646108
+      },
+      "oos_swap_adjusted_ann_return": -0.02991153846169326,
+      "holdout_2024_2026_seen_adjacent": {
+        "ann_return": 0.011814710985969201,
+        "monthly_return": 0.0009792676857025562,
+        "ann_vol": 0.0231843061421791,
+        "sharpe": 0.5181971539545976,
+        "max_dd": -0.03669679742650711,
+        "total_return": 0.03383874316749136
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": 0.0029075736459984736,
+        "monthly_return": 0.0002419755071383367,
+        "ann_vol": 0.019130566808548265,
+        "sharpe": 0.16132747151572469,
+        "max_dd": -0.041335352229097344,
+        "total_return": 0.027267246016638103
+      },
+      "target_2pct_month": {
+        "oos_sharpe": -0.5819437349331865,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_at_20pct_dd": 1.8446331394502433,
+        "monthly_return_at_20pct_dd": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0582,
+        "median_oos_sharpe": -0.3762518437439772,
+        "p05_oos_sharpe": -0.9554002849400067,
+        "p95_oos_sharpe": 0.036812772904979064,
+        "frac_hold_sharpe_pos": 0.44,
+        "frac_dev_sharpe_pos": 0.1833
+      },
+      "return_mc": {
+        "p05_ann_return": -0.030074751091252058,
+        "median_ann_return": -0.014861558031718725,
+        "p95_ann_return": 0.00018447320741758137,
+        "prob_loss_over_oos": 0.9477
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true
+      },
+      "validated": false,
+      "meets_2pct_month": false
+    },
+    "G3": {
+      "name": "Month-end equity-hedge flow (USD)",
+      "chosen_params": {
+        "2017": [
+          3,
+          0.02
+        ],
+        "2018": [
+          4,
+          0.0
+        ],
+        "2019": [
+          4,
+          0.005
+        ],
+        "2020": [
+          4,
+          0.02
+        ],
+        "2021": [
+          3,
+          0.02
+        ],
+        "2022": [
+          3,
+          0.01
+        ],
+        "2023": [
+          3,
+          0.01
+        ],
+        "2024": [
+          5,
+          0.01
+        ],
+        "2025": [
+          5,
+          0.01
+        ],
+        "2026": [
+          5,
+          0.03
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": 0.0050671488221847305,
+        "monthly_return": 0.0004212848845177586,
+        "ann_vol": 0.026891327977521653,
+        "sharpe": 0.20139948581441833,
+        "max_dd": -0.0483056921246946,
+        "total_return": 0.037053300023734304
+      },
+      "oos_swap_adjusted_ann_return": 0.0018890898161561531,
+      "holdout_2024_2026_seen_adjacent": {
+        "ann_return": -0.014380843873763038,
+        "monthly_return": -0.001206375941704585,
+        "ann_vol": 0.030528087878625362,
+        "sharpe": -0.4592395754720077,
+        "max_dd": -0.08047111564379172,
+        "total_return": -0.040210743178347386
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": 0.014871073831974169,
+        "monthly_return": 0.0012308888868912682,
+        "ann_vol": 0.02307411696743106,
+        "sharpe": 0.6512905756349198,
+        "max_dd": -0.03556750874900527,
+        "total_return": 0.14657468035590027
+      },
+      "target_2pct_month": {
+        "oos_sharpe": 0.20139948581441833,
+        "leverage_for_2pct_month": 50.0,
+        "max_dd_at_that_leverage": -0.9994940821255768,
+        "leverage_at_20pct_dd": 4.421711805833881,
+        "monthly_return_at_20pct_dd": 0.00140657199831562,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.6884,
+        "median_oos_sharpe": 0.2555777969187361,
+        "p05_oos_sharpe": -0.7796186559898852,
+        "p95_oos_sharpe": 0.5560458505373914,
+        "frac_hold_sharpe_pos": 0.2019,
+        "frac_dev_sharpe_pos": 1.0
+      },
+      "return_mc": {
+        "p05_ann_return": -0.010434041779835491,
+        "median_ann_return": 0.005197483096445988,
+        "p95_ann_return": 0.02107475259189325,
+        "prob_loss_over_oos": 0.2908
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": true,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true
+      },
+      "validated": false,
+      "meets_2pct_month": false
+    },
+    "G4": {
+      "name": "Trend on crosses (21 crosses)",
+      "chosen_params": {
+        "2017": [
+          100,
+          200
+        ],
+        "2018": [
+          100,
+          200
+        ],
+        "2019": [
+          100,
+          200
+        ],
+        "2020": [
+          100,
+          200
+        ],
+        "2021": [
+          100,
+          300
+        ],
+        "2022": [
+          100,
+          300
+        ],
+        "2023": [
+          100,
+          300
+        ],
+        "2024": [
+          100,
+          250
+        ],
+        "2025": [
+          100,
+          250
+        ],
+        "2026": [
+          100,
+          200
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.006529401686264924,
+        "monthly_return": -0.00054575197949569,
+        "ann_vol": 0.04266481455577124,
+        "sharpe": -0.13220813510978185,
+        "max_dd": -0.1341129588160398,
+        "total_return": -0.04606089853330808
+      },
+      "oos_swap_adjusted_ann_return": -0.034008421877528186,
+      "holdout_2024_2026_seen_adjacent": {
+        "ann_return": 0.01937240986730404,
+        "monthly_return": 0.0016002084265416272,
+        "ann_vol": 0.04643537169053756,
+        "sharpe": 0.4364004297377834,
+        "max_dd": -0.08018459869487649,
+        "total_return": 0.05586844776855027
+      },
+      "dev_2008_2016_chosen_blend": {
+        "ann_return": 0.01477429270637054,
+        "monthly_return": 0.0012229318426837388,
+        "ann_vol": 0.05072142211811907,
+        "sharpe": 0.3141809486044503,
+        "max_dd": -0.08560092515495488,
+        "total_return": 0.14556194184862892
+      },
+      "target_2pct_month": {
+        "oos_sharpe": -0.13220813510978185,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_at_20pct_dd": 1.5305110142710658,
+        "monthly_return_at_20pct_dd": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0142,
+        "median_oos_sharpe": -0.5258490574675534,
+        "p05_oos_sharpe": -0.7870302506457867,
+        "p95_oos_sharpe": -0.10838727303900175,
+        "frac_hold_sharpe_pos": 0.6766,
+        "frac_dev_sharpe_pos": 0.9976
+      },
+      "return_mc": {
+        "p05_ann_return": -0.03300990323422648,
+        "median_ann_return": -0.008734858792067857,
+        "p95_ann_return": 0.016448313713918857,
+        "prob_loss_over_oos": 0.7164
+      },
+      "criteria": {
+        "c1_wf_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true
+      },
+      "validated": false,
+      "meets_2pct_month": false
+    }
+  },
+  "validated": [],
+  "portfolio": {
+    "members": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "tradable": false,
+    "oos_2017_2023": {
+      "ann_return": -0.009613635429309708,
+      "monthly_return": -0.0008046881267891326,
+      "ann_vol": 0.045440746959928835,
+      "sharpe": -0.18984207720323007,
+      "max_dd": -0.11698258373982029,
+      "total_return": -0.06717504280157005
+    },
+    "holdout_2024_2026_seen_adjacent": {
+      "ann_return": 0.009211622302102151,
+      "monthly_return": 0.0007644131874666726,
+      "ann_vol": 0.045068909633674124,
+      "sharpe": 0.22593794357826083,
+      "max_dd": -0.07592366315089982,
+      "total_return": 0.026320544879992802
+    },
+    "full_2017_2026": {
+      "ann_return": -0.004332562081900471,
+      "monthly_return": -0.00036176578250379787,
+      "ann_vol": 0.045330267960744505,
+      "sharpe": -0.07311046536247186,
+      "max_dd": -0.12217866373716124,
+      "total_return": -0.042622581650453295
+    },
+    "target_2pct_month": {
+      "oos_sharpe": -0.18984207720323007,
+      "leverage_for_2pct_month": null,
+      "max_dd_at_that_leverage": null,
+      "leverage_at_20pct_dd": 1.7422581444188663,
+      "monthly_return_at_20pct_dd": null,
+      "target_reachable": false
+    },
+    "calendar_years": {
+      "2017": -0.048843815358052045,
+      "2018": 0.0015584142056102035,
+      "2019": 0.008751165196571264,
+      "2020": 0.027992598659358103,
+      "2021": -0.034798939903351256,
+      "2022": -0.016391593403107585,
+      "2023": -0.005378191414708189,
+      "2024": 0.009296147797499543,
+      "2025": -0.028972732068234808,
+      "2026": 0.04720807234049129
+    },
+    "return_mc_full": {
+      "p05_ann_return": -0.03002600557944666,
+      "median_ann_return": -0.0045614001776724256,
+      "p95_ann_return": 0.021655703285921552,
+      "prob_loss": 0.6147
+    },
+    "param_mc": {
+      "frac_oos_sharpe_pos": 0.1427,
+      "median_oos_sharpe": -0.3078866841561004,
+      "frac_hold_sharpe_pos": 0.4622,
+      "median_ann_return": -0.012252606645281772,
+      "p05_ann_return": -0.03227489517970852,
+      "p95_ann_return": 0.004713772901408875
+    }
+  }
+}
