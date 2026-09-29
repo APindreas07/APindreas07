@@ -11,9 +11,12 @@ routine runs you once per round. Each run is **one round**.
 
 ## Non-negotiable rules (the owner requires honesty above all)
 1. **Never generate synthetic prices or returns.** Use only real data:
-   - TradeStation MCP `get-bars`;
+   - TradeStation MCP `get-bars`, for daily data and for spot checks (it returns at most 100 bars per call);
    - the CSVs in `data/tradestation/`;
-   - `tools/extract_bars.py`, to rebuild CSVs from the transcripts.
+   - `tools/extract_bars.py`, to rebuild CSVs from the transcripts;
+   - **for intraday history, Dukascopy** via `tools/dukascopy.py`: real bid/ask candles, owner-approved on
+     2026-09-29. Charge at least the retail spread table even though Dukascopy spreads are tighter. Cross-check a
+     sample against TradeStation.
 
    Random numbers are allowed only for Monte Carlo tests that pick parameter sets or resample real returns.
 2. **Pre-register before testing.** Write `edge/lab/rN/PREREGISTRATION.md` (N = the round number) with:

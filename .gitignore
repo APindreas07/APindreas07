@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# Dukascopy intraday history (large; reproducible via tools/dukascopy.py, hashes in data/dukascopy_MANIFEST.csv)
+data/dukascopy/
