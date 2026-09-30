@@ -63,6 +63,13 @@ You run in a self-paced loop (see "Pacing and usage limits"). Every run does the
 6. **Report failures as failures.** Never call anything validated, or on target, unless it passed the criteria
    below.
 
+## Rollover-window rule (learned in round 8)
+Bid-only data (HistData, TradeStation bars) shows fake gains around the daily rollover, because spreads widen
+for 30-60 minutes after 17:00 New York.
+- **No entries or exits between 16:55 and 18:30 New York time** unless the test uses real bid/ask data for that
+  window.
+- Always compare a session-open strategy against the same trade on control days.
+
 ## Costs, for every backtest
 - **Fills:** buys fill at the ask and sells at the bid, using real Dukascopy quotes.
 - **Retail spread top-up:** raise each fill to at least the retail spread.

@@ -42,3 +42,9 @@ M1 is a genuine, mechanism-backed, out-of-sample-stable edge, but it is **small*
 not validated under the pre-registered rules, so **it is not deployed**. A clean next step, which is the
 owner's decision, is a **paper-trading forward test on the SIM account**. That would provide new evidence that
 none of the 23 trials have seen.
+
+## POST-HOC CORRECTION (2026-09-30, from round 8)
+M1's 07:00 Tokyo entry is 18:00 New York, inside the post-rollover window. There, bid-only data shows an artificial rise as widened spreads normalise (+0.9 pips on non-gotobi days from 07:00 to 07:30).
+- The gotobi-specific effect is real: +1.6 to +2.3 pips of excess over ordinary days.
+- A realistic entry at 07:30 makes about +2.3 pips gross against 2.1 pips of cost, which is **roughly zero net**.
+- The Sharpe of 0.70 reported above overstates the tradable edge. See edge/lab/r8/REPORT.md.

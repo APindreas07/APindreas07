@@ -4,7 +4,7 @@
 Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 
 ## Status
-- rounds_completed: 7 (round 7 = edge/lab/r7; round 6 = edge/lab/r6; round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
+- rounds_completed: 8 (round 8 = edge/lab/r8; round 7 = edge/lab/r7; round 6 = edge/lab/r6; round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
 - max_rounds: 30
 - candidate_in_forward_test: none
 - final_outcome: none yet
@@ -41,5 +41,8 @@ Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 | L4 | 6 | 7 majors + 21 crosses daily | Weekly reversal after extreme weeks | -0.140 | no | edge/lab/r6/REPORT.md |
 | M1 | 7 | USDJPY 5-min | Gotobi: buy before the 09:55 Tokyo fix | 0.703 | no (real but small; best so far) | edge/lab/r7/REPORT.md |
 | M2 | 7 | USDJPY 5-min | Gotobi: fade after the fix | -0.260 | no | edge/lab/r7/REPORT.md |
+| N1 | 8 | XAUUSD XAGUSD daily | Time-series momentum on metals | -0.310 | no | edge/lab/r8/REPORT.md |
+| N2 | 8 | XAUUSD 5-min | Gold Asian-session drift | 0.510 | no (rollover artifact) | edge/lab/r8/REPORT.md |
+| N3 | 8 | XAUUSD/XAGUSD daily | Gold/silver ratio mean reversion | -0.360 | no | edge/lab/r8/REPORT.md |
 
-FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 23.
+FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 26. NOTE (post-hoc): the M1 row's 0.703 is inflated by the rollover artifact (see edge/lab/r8/REPORT.md).

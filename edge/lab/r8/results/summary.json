@@ -1,0 +1,311 @@
+{
+  "n_trials_for_dsr": 26,
+  "hypotheses": {
+    "N1": {
+      "name": "Time-series momentum on gold and silver (weekly)",
+      "chosen_params": {
+        "2017": [
+          260
+        ],
+        "2018": [
+          120
+        ],
+        "2019": [
+          120
+        ],
+        "2020": [
+          120
+        ],
+        "2021": [
+          60
+        ],
+        "2022": [
+          120
+        ],
+        "2023": [
+          120
+        ],
+        "2024": [
+          260
+        ],
+        "2025": [
+          120
+        ],
+        "2026": [
+          260
+        ]
+      },
+      "oos": {
+        "ann_return": -0.030347450110710494,
+        "monthly_return": -0.0025648274985611286,
+        "ann_vol": 0.08807479339671696,
+        "sharpe": -0.3057968929013373,
+        "max_dd": -0.2664023948418337,
+        "total_return": -0.19807182025626136
+      },
+      "holdout": {
+        "ann_return": 0.16373209481204287,
+        "monthly_return": 0.01271618539182029,
+        "ann_vol": 0.10210957619545297,
+        "sharpe": 1.5365897012569436,
+        "max_dd": -0.114076468554963,
+        "total_return": 0.5302214436334374
+      },
+      "dev": {
+        "ann_return": -0.002595688852841227,
+        "monthly_return": -0.00021656517088508576,
+        "ann_vol": 0.08165854392447608,
+        "sharpe": 0.00878096496155652,
+        "max_dd": -0.1386129183351732,
+        "total_return": -0.013257321981607006
+      },
+      "target": {
+        "oos_sharpe": -0.3057968929013373,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 0.36034080112388833,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0397,
+        "median_oos_sharpe": -0.37205451594484695,
+        "frac_hold_sharpe_pos": 1.0,
+        "frac_dev_sharpe_pos": 0.4121
+      },
+      "return_mc": {
+        "p05_ann_return": -0.08537292280179812,
+        "prob_loss_over_oos": 0.8465
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.3057968929013373,
+        "sr0_annual": 1.6687522368636747,
+        "n_trials": 26,
+        "dsr": 5.7672240496904195e-08
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "N2": {
+      "name": "Gold Asian-session drift (no swap)",
+      "chosen_params": {
+        "2017": [
+          18,
+          2
+        ],
+        "2018": [
+          18,
+          2
+        ],
+        "2019": [
+          18,
+          2
+        ],
+        "2020": [
+          18,
+          2
+        ],
+        "2021": [
+          18,
+          4
+        ],
+        "2022": [
+          18,
+          4
+        ],
+        "2023": [
+          18,
+          4
+        ],
+        "2024": [
+          18,
+          4
+        ],
+        "2025": [
+          18,
+          4
+        ],
+        "2026": [
+          18,
+          2
+        ]
+      },
+      "oos": {
+        "ann_return": 0.01104693691879044,
+        "monthly_return": 0.0009159496584920657,
+        "ann_vol": 0.02217889961039591,
+        "sharpe": 0.5064428557429884,
+        "max_dd": -0.03670982119982491,
+        "total_return": 0.08187107665888171
+      },
+      "holdout": {
+        "ann_return": 0.05897272078836635,
+        "monthly_return": 0.0047863604432885065,
+        "ann_vol": 0.028076324628420662,
+        "sharpe": 2.0550865749158462,
+        "max_dd": -0.030788857914156087,
+        "total_return": 0.1743988371929992
+      },
+      "dev": {
+        "ann_return": 0.0038115470356663295,
+        "monthly_return": 0.0003170753824066619,
+        "ann_vol": 0.020736628692391398,
+        "sharpe": 0.19381036003069171,
+        "max_dd": -0.04766401973507939,
+        "total_return": 0.01972683871752623
+      },
+      "target": {
+        "oos_sharpe": 0.5064428557429884,
+        "leverage_for_2pct_month": 50.0,
+        "max_dd_at_that_leverage": -0.9733027085631233,
+        "leverage_within_limits": 2.797786303796305,
+        "monthly_return_within_limits": 0.0024614758628318523,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.3327,
+        "median_oos_sharpe": -0.6063671796544616,
+        "frac_hold_sharpe_pos": 1.0,
+        "frac_dev_sharpe_pos": 0.4453
+      },
+      "return_mc": {
+        "p05_ann_return": -0.003047066546660232,
+        "prob_loss_over_oos": 0.1143
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": 0.5064428557429884,
+        "sr0_annual": 1.6687522368636747,
+        "n_trials": 26,
+        "dsr": 0.0008978380745514445
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": true,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": true,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "N3": {
+      "name": "Gold/silver ratio mean reversion",
+      "chosen_params": {
+        "2017": [
+          120,
+          2.5,
+          20
+        ],
+        "2018": [
+          120,
+          2.5,
+          20
+        ],
+        "2019": [
+          120,
+          2.5,
+          20
+        ],
+        "2020": [
+          120,
+          2.5,
+          20
+        ],
+        "2021": [
+          250,
+          2.5,
+          20
+        ],
+        "2022": [
+          250,
+          2.5,
+          20
+        ],
+        "2023": [
+          250,
+          2.5,
+          20
+        ],
+        "2024": [
+          250,
+          2.5,
+          120
+        ],
+        "2025": [
+          250,
+          2.5,
+          120
+        ],
+        "2026": [
+          250,
+          2.5,
+          120
+        ]
+      },
+      "oos": {
+        "ann_return": -0.005903688213313996,
+        "monthly_return": -0.0004933102719432148,
+        "ann_vol": 0.015995850644028684,
+        "sharpe": -0.36214883888324567,
+        "max_dd": -0.06572453309831161,
+        "total_return": -0.0415248610953195
+      },
+      "holdout": {
+        "ann_return": -0.014403902089768938,
+        "monthly_return": -0.00120832316492403,
+        "ann_vol": 0.02827791955988044,
+        "sharpe": -0.4989442631250751,
+        "max_dd": -0.06295206675053866,
+        "total_return": -0.03988749670796765
+      },
+      "dev": {
+        "ann_return": 0.0014919117335270293,
+        "monthly_return": 0.00012424104551933546,
+        "ann_vol": 0.012131519033595061,
+        "sharpe": 0.12894489686310306,
+        "max_dd": -0.017312143067877095,
+        "total_return": 0.0076845148580444445
+      },
+      "target": {
+        "oos_sharpe": -0.36214883888324567,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 1.543401313833476,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0007,
+        "median_oos_sharpe": -0.9271730691884124,
+        "frac_hold_sharpe_pos": 0.0,
+        "frac_dev_sharpe_pos": 0.4108
+      },
+      "return_mc": {
+        "p05_ann_return": -0.01869221264004498,
+        "prob_loss_over_oos": 0.783
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.36214883888324567,
+        "sr0_annual": 1.6687522368636747,
+        "n_trials": 26,
+        "dsr": 6.4756901178675115e-09
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    }
+  }
+}
