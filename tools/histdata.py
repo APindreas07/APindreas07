@@ -1,4 +1,4 @@
-"""Download real HistData.com FX history (free 1-minute BID bars) and aggregate to 5-minute bars.
+﻿"""Download real HistData.com FX history (free 1-minute BID bars) and aggregate to 5-minute bars.
 
 Owner-approved on 2026-09-29 as the intraday source, because Dukascopy throttled this connection to a crawl.
 Real data only; nothing is generated.
@@ -119,7 +119,7 @@ def write_manifest():
     for f in sorted(OUT.glob("[A-Z]*/*.csv.gz")):
         b = f.read_bytes()
         rows.append({"file": f.relative_to(ROOT).as_posix(),
-                     "rows": len(pd.read_csv(io.BytesIO(b), usecols=["ts"])),
+                     "rows": len(pd.read_csv(io.BytesIO(b), usecols=["ts"], compression="gzip")),
                      "sha256": hashlib.sha256(b).hexdigest()})
     pd.DataFrame(rows).to_csv(OUT.parent / "histdata_MANIFEST.csv", index=False)
 

@@ -1,4 +1,4 @@
-"""Download real Dukascopy FX history (1-minute BID and ASK candles) and aggregate to 5-minute bid/ask bars.
+﻿"""Download real Dukascopy FX history (1-minute BID and ASK candles) and aggregate to 5-minute bid/ask bars.
 
 Real broker data only; nothing is generated. Each day file is Dukascopy's own LZMA-compressed binary:
 records of 24 bytes (big-endian): seconds-from-midnight-UTC uint32, open, close, low, high int32 (price / point), volume float32.
@@ -116,7 +116,7 @@ def write_manifest():
     rows = []
     for f in sorted(OUT.glob("[A-Z]*/*.csv.gz")):
         b = f.read_bytes()
-        n = len(pd.read_csv(io.BytesIO(b), usecols=["ts"]))
+        n = len(pd.read_csv(io.BytesIO(b), usecols=["ts"], compression="gzip"))
         rows.append({"file": f.relative_to(ROOT).as_posix(), "rows": n, "sha256": hashlib.sha256(b).hexdigest()})
     pd.DataFrame(rows).to_csv(OUT.parent / "dukascopy_MANIFEST.csv", index=False)
 
