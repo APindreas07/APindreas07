@@ -1,10 +1,10 @@
 ﻿# Agent state (read first on every run; update last)
 
-- **stage:** RESEARCH round 10; M1/M1b shadow test running
+- **stage:** RESEARCH round 11 (slow pace); M1/M1b shadow test running
 - **halted:** false (kill switch not triggered)
 - **deployed:** M1 gotobi as a SHADOW forward test (no orders; SIM accounts cannot trade spot FX). See edge/lab/deploy/M1_FORWARD.md. First trade: Tokyo 2026-10-05 (Sun Oct 4, 18:00-20:55 UTC-4); log it on Oct 5 with get-bars.
 - **email_thread_id:** 1a0eec446c2c9ba9
-- **last_report_number:** 10 (sent 2026-09-30: round 9 ML + status)
+- **last_report_number:** 11 (sent 2026-09-30: round 10 real carry)
 - **owner decisions (read from Gmail on 2026-09-30):**
   - 20:45 UTC: "craft, develop, test and validate new strategies ... go over again all the currencies + gold & silver ... use every technology possibly ... let me know how it goes" -> round 9 = machine learning.
   - 09:47 UTC: "Include Gold and Silver".
@@ -14,7 +14,7 @@
     - **continue the FX search AND add gold/silver**.
 - **next_action:**
   1. On 2026-10-05 (after 21:00 UTC-4 on Oct 4): log the M1/M1b shadow trade (get-bars USDJPY 5-min, lastdate 2026-10-05) in `edge/lab/deploy/M1_FORWARD.md`.
-  2. Round 10 (announced in report #10 unless the owner objects): download real short-term interest rates from FRED (fredgraph.csv; e.g. the 3-month interbank/T-bill rate for USD, EUR, GBP, JPY, AUD, CAD, CHF, NZD, NOK, SEK, PLN, HUF, CZK; policy-rate proxies where needed). Pre-register a **swap-realistic re-evaluation** of the multi-day families (F1-F4, G1, G4, J3, N1, P1) with real daily carry, counted as ONE new trial family (Q1). Rates are used for financing only, never as signals.
+  2. Round 11, slow pace (not before 2026-10-01 06:00 local). The real carry data is now available (data/rates) for all later multi-day tests. Remaining idea space is thin, so prefer fewer, well-evidenced ideas.
 - **notes:**
   - Owner replies come from the same address (SENT label). Read the thread with `get_thread`; never use
     -in:sent.

@@ -1,0 +1,114 @@
+{
+  "n_trials_for_dsr": 28,
+  "Q1": {
+    "name": "P1 with real financing (OECD 3M rates)",
+    "chosen_params": {
+      "2017": [
+        1,
+        1.0,
+        0.0
+      ],
+      "2018": [
+        5,
+        10.0,
+        0.5
+      ],
+      "2019": [
+        20,
+        100.0,
+        0.5
+      ],
+      "2020": [
+        20,
+        10.0,
+        0.8
+      ],
+      "2021": [
+        20,
+        10.0,
+        0.8
+      ],
+      "2022": [
+        20,
+        10.0,
+        0.8
+      ],
+      "2023": [
+        20,
+        10.0,
+        0.8
+      ],
+      "2024": [
+        20,
+        1.0,
+        0.8
+      ],
+      "2025": [
+        20,
+        1.0,
+        0.8
+      ],
+      "2026": [
+        10,
+        100.0,
+        0.5
+      ]
+    },
+    "oos": {
+      "ann_return": -0.014416732674605859,
+      "monthly_return": -0.0012094067019019494,
+      "ann_vol": 0.028294430984112325,
+      "sharpe": -0.4990780774233369,
+      "max_dd": -0.1530252141803211,
+      "total_return": -0.09852788428424508
+    },
+    "holdout": {
+      "ann_return": -0.004878524236551662,
+      "monthly_return": -0.0004074555575152017,
+      "ann_vol": 0.023761948184122715,
+      "sharpe": -0.1939575227739399,
+      "max_dd": -0.03584248840268389,
+      "total_return": -0.013588484240685261
+    },
+    "dev": {
+      "ann_return": -0.0004531545081390975,
+      "monthly_return": -3.7770721140972796e-05,
+      "ann_vol": 0.0220401854712226,
+      "sharpe": -0.009565431861159455,
+      "max_dd": -0.041602903320200446,
+      "total_return": -0.0013929747048425645
+    },
+    "target": {
+      "oos_sharpe": -0.4990780774233369,
+      "leverage_for_2pct_month": null,
+      "max_dd_at_that_leverage": null,
+      "leverage_within_limits": 0.637072265306219,
+      "monthly_return_within_limits": null,
+      "target_reachable": false
+    },
+    "param_mc": {
+      "frac_oos_sharpe_pos": 0.1425,
+      "median_oos_sharpe": -0.4381009824195027,
+      "frac_hold_sharpe_pos": 0.2502
+    },
+    "return_mc": {
+      "p05_ann_return": -0.0290073843296608,
+      "prob_loss_over_oos": 0.9182
+    },
+    "deflated_sharpe": {
+      "sharpe_annual": -0.4990780774233369,
+      "sr0_annual": 1.6370696699631604,
+      "n_trials": 28,
+      "dsr": 5.762874806819599e-09
+    },
+    "criteria": {
+      "c1_oos_sharpe>=0.3_and_ret>0": false,
+      "c2_param_mc_>=60%_pos_and_median>0": false,
+      "c3_return_mc_prob_loss<20%": false,
+      "c4_dev_sharpe>0": false,
+      "c5_2pct_month_within_limits": false,
+      "c6_deflated_sharpe>=0.95": false
+    },
+    "validated": false
+  }
+}
