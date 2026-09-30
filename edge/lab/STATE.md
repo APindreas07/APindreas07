@@ -1,6 +1,6 @@
 ﻿# Agent state (read first on every run; update last)
 
-- **stage:** DATA (round 4); pre-registration committed
+- **stage:** TEST (round 4), full run started (log: %TEMP%\claude\r4_run.log)
 - **halted:** false (kill switch not triggered)
 - **deployed:** none
 - **email_thread_id:** 1a0eec446c2c9ba9
