@@ -1,0 +1,368 @@
+{
+  "days": 3816,
+  "first": "2012-01-02",
+  "last": "2026-09-24",
+  "n_trials_for_dsr": 16,
+  "hypotheses": {
+    "J1": {
+      "name": "Volatility-squeeze breakout (7 majors + 21 crosses)",
+      "chosen_params": {
+        "2017": [
+          10,
+          50,
+          0.8,
+          40,
+          2,
+          20
+        ],
+        "2018": [
+          10,
+          100,
+          0.6,
+          40,
+          2,
+          40
+        ],
+        "2019": [
+          10,
+          100,
+          0.6,
+          40,
+          2,
+          40
+        ],
+        "2020": [
+          10,
+          100,
+          0.6,
+          40,
+          2,
+          40
+        ],
+        "2021": [
+          10,
+          100,
+          0.6,
+          20,
+          2,
+          40
+        ],
+        "2022": [
+          5,
+          50,
+          0.6,
+          40,
+          3,
+          20
+        ],
+        "2023": [
+          5,
+          50,
+          0.6,
+          40,
+          3,
+          20
+        ],
+        "2024": [
+          5,
+          50,
+          0.6,
+          40,
+          3,
+          20
+        ],
+        "2025": [
+          10,
+          50,
+          0.6,
+          40,
+          3,
+          20
+        ],
+        "2026": [
+          10,
+          50,
+          0.6,
+          40,
+          3,
+          20
+        ]
+      },
+      "oos": {
+        "ann_return": -0.010052473283300056,
+        "monthly_return": -0.0008415907116100518,
+        "ann_vol": 0.011195122328420784,
+        "sharpe": -0.8968631725075287,
+        "max_dd": -0.0752355436559825,
+        "total_return": -0.06999716514094212
+      },
+      "holdout": {
+        "ann_return": -0.018155363992803708,
+        "monthly_return": -0.0015256845373528005,
+        "ann_vol": 0.010919713194782136,
+        "sharpe": -1.6723837018499141,
+        "max_dd": -0.049685203334002725,
+        "total_return": -0.05024322176444729
+      },
+      "dev": {
+        "ann_return": -0.010490242596576271,
+        "monthly_return": -0.0008784183848874472,
+        "ann_vol": 0.011398219201359123,
+        "sharpe": -0.9194701499167708,
+        "max_dd": -0.06634048674837911,
+        "total_return": -0.05282995005179314
+      },
+      "target": {
+        "oos_sharpe": -0.8968631725075287,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 1.3444077624636297,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -0.8468786216715409,
+        "frac_hold_sharpe_pos": 0.0,
+        "frac_dev_sharpe_pos": 0.0013
+      },
+      "return_mc": {
+        "p05_ann_return": -0.015850989666574732,
+        "median_ann_return": -0.0102057467892448,
+        "prob_loss_over_oos": 0.9979
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.8968631725075287,
+        "sr0_annual": 1.6226431283876241,
+        "n_trials": 16,
+        "dsr": 4.901804551569246e-12
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "J2": {
+      "name": "Bollinger mean reversion (9 Scandi/CEE)",
+      "chosen_params": {
+        "2017": [
+          40,
+          2.0,
+          10
+        ],
+        "2018": [
+          40,
+          2.5,
+          5
+        ],
+        "2019": [
+          40,
+          2.5,
+          5
+        ],
+        "2020": [
+          40,
+          2.5,
+          5
+        ],
+        "2021": [
+          40,
+          2.5,
+          5
+        ],
+        "2022": [
+          40,
+          2.5,
+          5
+        ],
+        "2023": [
+          40,
+          2.5,
+          5
+        ],
+        "2024": [
+          40,
+          2.5,
+          5
+        ],
+        "2025": [
+          40,
+          2.5,
+          20
+        ],
+        "2026": [
+          10,
+          2.5,
+          10
+        ]
+      },
+      "oos": {
+        "ann_return": -0.018071709791245838,
+        "monthly_return": -0.0015185955585234057,
+        "ann_vol": 0.02352754243159865,
+        "sharpe": -0.7633158491311552,
+        "max_dd": -0.15622957716980368,
+        "total_return": -0.12277166242918214
+      },
+      "holdout": {
+        "ann_return": -0.007939054327471662,
+        "monthly_return": -0.0006640074839405763,
+        "ann_vol": 0.01658136321846998,
+        "sharpe": -0.4724243612047352,
+        "max_dd": -0.04431312141815191,
+        "total_return": -0.022176018970227918
+      },
+      "dev": {
+        "ann_return": -0.004303393659586541,
+        "monthly_return": -0.0003593254195899398,
+        "ann_vol": 0.015901804322217886,
+        "sharpe": -0.2632566599442502,
+        "max_dd": -0.058872603877900165,
+        "total_return": -0.021952078330112812
+      },
+      "target": {
+        "oos_sharpe": -0.7633158491311552,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 0.6224654677907532,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -0.9888984368680609,
+        "frac_hold_sharpe_pos": 0.0013,
+        "frac_dev_sharpe_pos": 0.0169
+      },
+      "return_mc": {
+        "p05_ann_return": -0.03248991189021531,
+        "median_ann_return": -0.017177272734241508,
+        "prob_loss_over_oos": 0.9895
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.7633158491311552,
+        "sr0_annual": 1.6226431283876241,
+        "n_trials": 16,
+        "dsr": 8.032718502368652e-12
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "J3": {
+      "name": "Moving-average trend (9 Scandi/CEE)",
+      "chosen_params": {
+        "2017": [
+          50,
+          200
+        ],
+        "2018": [
+          50,
+          200
+        ],
+        "2019": [
+          20,
+          200
+        ],
+        "2020": [
+          50,
+          200
+        ],
+        "2021": [
+          20,
+          200
+        ],
+        "2022": [
+          20,
+          200
+        ],
+        "2023": [
+          20,
+          200
+        ],
+        "2024": [
+          20,
+          200
+        ],
+        "2025": [
+          5,
+          50
+        ],
+        "2026": [
+          5,
+          50
+        ]
+      },
+      "oos": {
+        "ann_return": -0.046343004772981256,
+        "monthly_return": -0.003946460174800159,
+        "ann_vol": 0.04591799534094751,
+        "sharpe": -1.0103340553826652,
+        "max_dd": -0.2911923463084485,
+        "total_return": -0.2888132615687995
+      },
+      "holdout": {
+        "ann_return": -0.06988838383084162,
+        "monthly_return": -0.006019367465894154,
+        "ann_vol": 0.05347285966028272,
+        "sharpe": -1.3279919038199977,
+        "max_dd": -0.19117252152185882,
+        "total_return": -0.184406671865317
+      },
+      "dev": {
+        "ann_return": -0.05089953200895447,
+        "monthly_return": -0.004343922652258914,
+        "ann_vol": 0.030711343006217046,
+        "sharpe": -1.68549736609508,
+        "max_dd": -0.23827203772516836,
+        "total_return": -0.23575995440662856
+      },
+      "target": {
+        "oos_sharpe": -1.0103340553826652,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 0.31086046244370596,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -1.1727545406174233,
+        "frac_hold_sharpe_pos": 0.0,
+        "frac_dev_sharpe_pos": 0.0
+      },
+      "return_mc": {
+        "p05_ann_return": -0.07061786909007953,
+        "median_ann_return": -0.04555793908255469,
+        "prob_loss_over_oos": 0.9977
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -1.0103340553826652,
+        "sr0_annual": 1.6226431283876241,
+        "n_trials": 16,
+        "dsr": 7.135589554872169e-13
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    }
+  },
+  "validated": []
+}

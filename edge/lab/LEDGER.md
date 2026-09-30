@@ -4,7 +4,7 @@
 Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 
 ## Status
-- rounds_completed: 3 (round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3; the pre-lab study in edge/ is listed below too)
+- rounds_completed: 4 (round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
 - max_rounds: 30
 - candidate_in_forward_test: none
 - final_outcome: none yet
@@ -31,5 +31,8 @@ Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 | H2 | 3 | USDJPY 5-min | London-open momentum, USDJPY only | -0.940 | no | edge/lab/r3/REPORT.md |
 | H3 | 3 | 7 FX majors 5-min | London 4pm fix reversal | -3.360 | no | edge/lab/r3/REPORT.md |
 | H4 | 3 | 7 FX majors 15-min | Regime-filtered intraday mean reversion | -0.350 | no | edge/lab/r3/REPORT.md |
+| J1 | 4 | 7 majors + 21 crosses daily | Volatility-squeeze breakout, multi-day | -0.900 | no | edge/lab/r4/REPORT.md |
+| J2 | 4 | 9 Scandi/CEE daily | Bollinger mean reversion, multi-day | -0.760 | no | edge/lab/r4/REPORT.md |
+| J3 | 4 | 9 Scandi/CEE daily | Moving-average trend with stop | -1.010 | no | edge/lab/r4/REPORT.md |
 
-FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 13.
+FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 16.
