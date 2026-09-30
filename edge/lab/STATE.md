@@ -13,8 +13,8 @@
     - **paper-trade M1 gotobi on SIM: YES**;
     - **continue the FX search AND add gold/silver**.
 - **next_action:**
-  1. On 2026-10-05 (after 21:00 UTC-4 on Oct 4): fetch USDJPY 5-min bars with `get-bars` (lastdate 2026-10-05) and log the M1/M1b shadow trade in `edge/lab/deploy/M1_FORWARD.md`. Repeat for every gotobi date.
-  2. Round 9 research, slow pace (not before 2026-09-30 21:00 local). Obey the new rollover-window rule. Remaining ideas are thin; consider an honest recommendation to the owner.
+  1. On 2026-10-05 (after 21:00 UTC-4 on Oct 4): log the M1/M1b shadow trade (get-bars USDJPY 5-min, lastdate 2026-10-05) in `edge/lab/deploy/M1_FORWARD.md`.
+  2. Round 10 (announced in report #10 unless the owner objects): download real short-term interest rates from FRED (fredgraph.csv; e.g. the 3-month interbank/T-bill rate for USD, EUR, GBP, JPY, AUD, CAD, CHF, NZD, NOK, SEK, PLN, HUF, CZK; policy-rate proxies where needed). Pre-register a **swap-realistic re-evaluation** of the multi-day families (F1-F4, G1, G4, J3, N1, P1) with real daily carry, counted as ONE new trial family (Q1). Rates are used for financing only, never as signals.
 - **notes:**
   - Owner replies come from the same address (SENT label). Read the thread with `get_thread`; never use
     -in:sent.
