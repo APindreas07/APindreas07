@@ -1,10 +1,10 @@
-# Strategy lab ledger
+﻿# Strategy lab ledger
 
 **Append-only.** Every hypothesis ever tested is listed here, whether it passed or failed. Its trial count feeds the
 Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 
 ## Status
-- rounds_completed: 2 (round 1 = edge/fx, round 2 = edge/fx2; the pre-lab study in edge/ is listed below too)
+- rounds_completed: 3 (round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3; the pre-lab study in edge/ is listed below too)
 - max_rounds: 30
 - candidate_in_forward_test: none
 - final_outcome: none yet
@@ -27,5 +27,9 @@ Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 | G2 | 2 | 7 FX majors daily | Short-term cross-sectional reversal | -0.582 | no | edge/fx2/REPORT.md |
 | G3 | 2 | 7 FX majors daily | Month-end equity-hedge flow | 0.201 | no | edge/fx2/REPORT.md |
 | G4 | 2 | 21 FX crosses daily | Trend on crosses | -0.132 | no | edge/fx2/REPORT.md |
+| H1 | 3 | 7 FX majors 5-min | London-open momentum | -2.140 | no | edge/lab/r3/REPORT.md |
+| H2 | 3 | USDJPY 5-min | London-open momentum, USDJPY only | -0.940 | no | edge/lab/r3/REPORT.md |
+| H3 | 3 | 7 FX majors 5-min | London 4pm fix reversal | -3.360 | no | edge/lab/r3/REPORT.md |
+| H4 | 3 | 7 FX majors 15-min | Regime-filtered intraday mean reversion | -0.350 | no | edge/lab/r3/REPORT.md |
 
-FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 9.
+FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 13.

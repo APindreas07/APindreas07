@@ -1,0 +1,459 @@
+{
+  "data": {
+    "source": "Dukascopy 5-minute bid/ask (tools/dukascopy.py)",
+    "first_day": "2012-01-02",
+    "last_day": "2026-09-25",
+    "days": 3840,
+    "pairs": [
+      "EURUSD",
+      "GBPUSD",
+      "USDJPY",
+      "AUDUSD",
+      "USDCAD",
+      "USDCHF",
+      "NZDUSD"
+    ]
+  },
+  "n_trials_for_dsr": 13,
+  "hypotheses": {
+    "H1": {
+      "name": "London-open momentum (7 majors)",
+      "chosen_params": {
+        "2017": [
+          15,
+          16
+        ],
+        "2018": [
+          15,
+          16
+        ],
+        "2019": [
+          15,
+          16
+        ],
+        "2020": [
+          30,
+          16
+        ],
+        "2021": [
+          45,
+          16
+        ],
+        "2022": [
+          45,
+          16
+        ],
+        "2023": [
+          60,
+          16
+        ],
+        "2024": [
+          45,
+          16
+        ],
+        "2025": [
+          45,
+          16
+        ],
+        "2026": [
+          45,
+          16
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.08439613175402605,
+        "monthly_return": -0.007320694390597571,
+        "ann_vol": 0.04074589807754426,
+        "sharpe": -2.1431971099306137,
+        "max_dd": -0.4746792003794277,
+        "total_return": -0.47175414482812794
+      },
+      "holdout_2024_2026": {
+        "ann_return": -0.06483598245371935,
+        "monthly_return": -0.0055705387908771,
+        "ann_vol": 0.04189298582680783,
+        "sharpe": -1.5789557689262705,
+        "max_dd": -0.18461560715230252,
+        "total_return": -0.17320112914598895
+      },
+      "dev_2012_2016_chosen_blend": {
+        "ann_return": -0.049125842550611476,
+        "monthly_return": -0.004188997548797313,
+        "ann_vol": 0.03324373516136809,
+        "sharpe": -1.4985099732014504,
+        "max_dd": -0.24643007322768207,
+        "total_return": -0.22899734021007534
+      },
+      "target_2pct_month": {
+        "oos_sharpe": -2.1431971099306137,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_at_20pct_dd": 0.3487837851638861,
+        "monthly_return_at_20pct_dd": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -2.9388891753982844,
+        "p05_oos_sharpe": -5.336983144935603,
+        "p95_oos_sharpe": -1.6762000077569894,
+        "frac_hold_sharpe_pos": 0.0,
+        "frac_dev_sharpe_pos": 0.0
+      },
+      "return_mc": {
+        "p05_ann_return": -0.10477460262634057,
+        "median_ann_return": -0.08442797156273069,
+        "p95_ann_return": -0.06364348516914596,
+        "prob_loss_over_oos": 1.0
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -2.1431971099306137,
+        "sr0_annual": 1.7065502069422371,
+        "n_trials": 13,
+        "dsr": 7.697118974989352e-24
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_reachable": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "H2": {
+      "name": "London-open momentum (USDJPY only)",
+      "chosen_params": {
+        "2017": [
+          60,
+          16
+        ],
+        "2018": [
+          45,
+          16
+        ],
+        "2019": [
+          45,
+          16
+        ],
+        "2020": [
+          45,
+          16
+        ],
+        "2021": [
+          45,
+          16
+        ],
+        "2022": [
+          60,
+          16
+        ],
+        "2023": [
+          60,
+          16
+        ],
+        "2024": [
+          60,
+          16
+        ],
+        "2025": [
+          60,
+          16
+        ],
+        "2026": [
+          60,
+          16
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.06519902637020847,
+        "monthly_return": -0.00560271548328406,
+        "ann_vol": 0.06901889130757749,
+        "sharpe": -0.9422489542902314,
+        "max_dd": -0.3950134877169813,
+        "total_return": -0.3861497135098285
+      },
+      "holdout_2024_2026": {
+        "ann_return": 0.014092287834420514,
+        "monthly_return": 0.0011668397843569434,
+        "ann_vol": 0.07730691214007707,
+        "sharpe": 0.22028143084896978,
+        "max_dd": -0.08731484142141632,
+        "total_return": 0.04050373483649805
+      },
+      "dev_2012_2016_chosen_blend": {
+        "ann_return": 0.0014357884038223023,
+        "monthly_return": 0.00011957036840093416,
+        "ann_vol": 0.056451663523658886,
+        "sharpe": 0.05358681352149409,
+        "max_dd": -0.11710158047954877,
+        "total_return": 0.007434727541077546
+      },
+      "target_2pct_month": {
+        "oos_sharpe": -0.9422489542902314,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_at_20pct_dd": 0.45020987076224905,
+        "monthly_return_at_20pct_dd": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -1.7881432078560888,
+        "p05_oos_sharpe": -2.4171938082823714,
+        "p95_oos_sharpe": -0.6194118799892897,
+        "frac_hold_sharpe_pos": 0.2004,
+        "frac_dev_sharpe_pos": 0.082
+      },
+      "return_mc": {
+        "p05_ann_return": -0.10440822335719435,
+        "median_ann_return": -0.06254410147614997,
+        "p95_ann_return": -0.019911926049837023,
+        "prob_loss_over_oos": 0.9902
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.9422489542902314,
+        "sr0_annual": 1.7065502069422371,
+        "n_trials": 13,
+        "dsr": 8.607679157381051e-13
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_reachable": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "H3": {
+      "name": "London 4pm fix reversal (USD)",
+      "chosen_params": {
+        "2017": [
+          120,
+          240
+        ],
+        "2018": [
+          120,
+          240
+        ],
+        "2019": [
+          120,
+          240
+        ],
+        "2020": [
+          120,
+          240
+        ],
+        "2021": [
+          120,
+          240
+        ],
+        "2022": [
+          120,
+          240
+        ],
+        "2023": [
+          120,
+          240
+        ],
+        "2024": [
+          120,
+          240
+        ],
+        "2025": [
+          120,
+          240
+        ],
+        "2026": [
+          120,
+          240
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.15236891855798518,
+        "monthly_return": -0.013681362950052955,
+        "ann_vol": 0.048822827685141165,
+        "sharpe": -3.3603999667747098,
+        "max_dd": -0.69693467280516,
+        "total_return": -0.6977582108019027
+      },
+      "holdout_2024_2026": {
+        "ann_return": -0.18991158580338763,
+        "monthly_return": -0.01739786881789762,
+        "ann_vol": 0.048547598540487534,
+        "sharpe": -4.312171093912405,
+        "max_dd": -0.4530412029762789,
+        "total_return": -0.44985281783394293
+      },
+      "dev_2012_2016_chosen_blend": {
+        "ann_return": -0.09878159814857601,
+        "monthly_return": -0.008629851481023798,
+        "ann_vol": 0.04527660041070644,
+        "sharpe": -2.2740738450420346,
+        "max_dd": -0.4185048294137522,
+        "total_return": -0.4154775772716405
+      },
+      "target_2pct_month": {
+        "oos_sharpe": -3.3603999667747098,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_at_20pct_dd": 0.18807045997493943,
+        "monthly_return_at_20pct_dd": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -4.3835904456373305,
+        "p05_oos_sharpe": -6.590276289094546,
+        "p95_oos_sharpe": -3.591043867177,
+        "frac_hold_sharpe_pos": 0.0,
+        "frac_dev_sharpe_pos": 0.0
+      },
+      "return_mc": {
+        "p05_ann_return": -0.1751054914139203,
+        "median_ann_return": -0.14926193894001727,
+        "p95_ann_return": -0.12333603129814871,
+        "prob_loss_over_oos": 1.0
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -3.3603999667747098,
+        "sr0_annual": 1.7065502069422371,
+        "n_trials": 13,
+        "dsr": 1.488417111286092e-38
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_reachable": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "H4": {
+      "name": "Regime-filtered intraday mean reversion (15m)",
+      "chosen_params": {
+        "2017": [
+          96,
+          3.0,
+          0.15
+        ],
+        "2018": [
+          96,
+          3.0,
+          0.15
+        ],
+        "2019": [
+          12,
+          3.0,
+          0.25
+        ],
+        "2020": [
+          12,
+          3.0,
+          0.25
+        ],
+        "2021": [
+          12,
+          3.0,
+          0.25
+        ],
+        "2022": [
+          12,
+          3.0,
+          0.25
+        ],
+        "2023": [
+          12,
+          3.0,
+          0.15
+        ],
+        "2024": [
+          96,
+          3.0,
+          0.15
+        ],
+        "2025": [
+          12,
+          3.0,
+          0.15
+        ],
+        "2026": [
+          12,
+          3.0,
+          0.15
+        ]
+      },
+      "oos_2017_2023": {
+        "ann_return": -0.0012172893315649524,
+        "monthly_return": -0.00010149741795761891,
+        "ann_vol": 0.0034630758119174204,
+        "sharpe": -0.3499877316713377,
+        "max_dd": -0.015251615280948205,
+        "total_return": -0.008777474212079417
+      },
+      "holdout_2024_2026": {
+        "ann_return": -0.003719404049037478,
+        "monthly_return": -0.00031047997708266717,
+        "ann_vol": 0.0024592460280293623,
+        "sharpe": -1.5139959042976647,
+        "max_dd": -0.010662088177217144,
+        "total_return": -0.010517050362903735
+      },
+      "dev_2012_2016_chosen_blend": {
+        "ann_return": -0.0021000617901858476,
+        "monthly_return": -0.0001751738229480715,
+        "ann_vol": 0.002476050516217394,
+        "sharpe": -0.8477995074131145,
+        "max_dd": -0.012635199877058634,
+        "total_return": -0.010794700564040083
+      },
+      "target_2pct_month": {
+        "oos_sharpe": -0.3499877316713377,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_at_20pct_dd": 14.228305107938283,
+        "monthly_return_at_20pct_dd": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "n": 10000,
+        "frac_oos_sharpe_pos": 0.0124,
+        "median_oos_sharpe": -2.8036105727953493,
+        "p05_oos_sharpe": -4.764875667001866,
+        "p95_oos_sharpe": -0.6591461380519439,
+        "frac_hold_sharpe_pos": 0.0017,
+        "frac_dev_sharpe_pos": 0.0001
+      },
+      "return_mc": {
+        "p05_ann_return": -0.003071301541838843,
+        "median_ann_return": -0.0010521913206767374,
+        "p95_ann_return": 0.0009677474293288248,
+        "prob_loss_over_oos": 0.8023
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.3499877316713377,
+        "sr0_annual": 1.7065502069422371,
+        "n_trials": 13,
+        "dsr": 1.4526559284168448e-08
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_reachable": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    }
+  },
+  "validated": []
+}
