@@ -4,7 +4,7 @@
 Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 
 ## Status
-- rounds_completed: 6 (round 6 = edge/lab/r6; round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
+- rounds_completed: 7 (round 7 = edge/lab/r7; round 6 = edge/lab/r6; round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
 - max_rounds: 30
 - candidate_in_forward_test: none
 - final_outcome: none yet
@@ -39,5 +39,7 @@ Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 | K3 | 5 | G1 + G3 streams | Combination of round-2 near-misses | 0.240 | no (closest so far) | edge/lab/r5/REPORT.md |
 | L1 | 6 | EURUSD GBPUSD USDJPY 5-min | Asian-range breakout at London | -1.370 | no | edge/lab/r6/REPORT.md |
 | L4 | 6 | 7 majors + 21 crosses daily | Weekly reversal after extreme weeks | -0.140 | no | edge/lab/r6/REPORT.md |
+| M1 | 7 | USDJPY 5-min | Gotobi: buy before the 09:55 Tokyo fix | 0.703 | no (real but small; best so far) | edge/lab/r7/REPORT.md |
+| M2 | 7 | USDJPY 5-min | Gotobi: fade after the fix | -0.260 | no | edge/lab/r7/REPORT.md |
 
-FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 21.
+FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 23.

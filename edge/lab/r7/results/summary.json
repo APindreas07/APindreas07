@@ -1,0 +1,209 @@
+{
+  "n_trials_for_dsr": 23,
+  "hypotheses": {
+    "M1": {
+      "name": "Gotobi: buy USDJPY before the 09:55 Tokyo fix",
+      "chosen_params": {
+        "2017": [
+          7.0
+        ],
+        "2018": [
+          7.0
+        ],
+        "2019": [
+          7.0
+        ],
+        "2020": [
+          7.0
+        ],
+        "2021": [
+          7.0
+        ],
+        "2022": [
+          7.0
+        ],
+        "2023": [
+          7.0
+        ],
+        "2024": [
+          7.0
+        ],
+        "2025": [
+          7.0
+        ],
+        "2026": [
+          7.0
+        ]
+      },
+      "oos": {
+        "ann_return": 0.011260445988708678,
+        "monthly_return": 0.0009335620910595477,
+        "ann_vol": 0.01612208415384053,
+        "sharpe": 0.702617159508955,
+        "max_dd": -0.018168700820111905,
+        "total_return": 0.08437553247011476
+      },
+      "holdout": {
+        "ann_return": 0.008783174490690548,
+        "monthly_return": 0.0007290011583618305,
+        "ann_vol": 0.014495836234796292,
+        "sharpe": 0.6105145577436566,
+        "max_dd": -0.01824203769032351,
+        "total_return": 0.025086510223560676
+      },
+      "dev": {
+        "ann_return": 0.00254076017308158,
+        "monthly_return": 0.00021148385112534918,
+        "ann_vol": 0.01501788786374289,
+        "sharpe": 0.17647133877415266,
+        "max_dd": -0.04012863581760073,
+        "total_return": 0.013217338555144176
+      },
+      "target": {
+        "oos_sharpe": 0.702617159508955,
+        "leverage_for_2pct_month": 36.09744653000112,
+        "max_dd_at_that_leverage": -0.5082369627857068,
+        "leverage_within_limits": 5.0,
+        "monthly_return_within_limits": 0.004458685364671311,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.3282,
+        "median_oos_sharpe": -0.2166165982943462,
+        "frac_hold_sharpe_pos": 0.3357
+      },
+      "approx_gross_pips_per_trade_oos_by_setting": {
+        "7.0": 3.5736625514403286,
+        "7.5": 2.298151950718699,
+        "8.0": 2.023809523809501,
+        "8.5": 2.045661157024781,
+        "9.0": 1.2161033797216596,
+        "9.5": 0.7493041749503021
+      },
+      "control_non_gotobi_oos_sharpe": -1.5499669386492623,
+      "return_mc": {
+        "p05_ann_return": 0.0020306834062020734,
+        "prob_loss_over_oos": 0.022
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": 0.702617159508955,
+        "sr0_annual": 1.6720268621003371,
+        "n_trials": 23,
+        "dsr": 0.004730371485613766
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": true,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": true,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "M2": {
+      "name": "Gotobi: fade USDJPY after the fix",
+      "chosen_params": {
+        "2017": [
+          14.5
+        ],
+        "2018": [
+          14.5
+        ],
+        "2019": [
+          13.5
+        ],
+        "2020": [
+          13.5
+        ],
+        "2021": [
+          14.5
+        ],
+        "2022": [
+          14.5
+        ],
+        "2023": [
+          14.5
+        ],
+        "2024": [
+          14.5
+        ],
+        "2025": [
+          12.5
+        ],
+        "2026": [
+          13.5
+        ]
+      },
+      "oos": {
+        "ann_return": -0.005787851600367322,
+        "monthly_return": -0.00048360520235724014,
+        "ann_vol": 0.021313215662426395,
+        "sharpe": -0.2617076879234862,
+        "max_dd": -0.08461514071188547,
+        "total_return": -0.041122252957918715
+      },
+      "holdout": {
+        "ann_return": -0.009108704267948853,
+        "monthly_return": -0.0007622461893350696,
+        "ann_vol": 0.017237180354199858,
+        "sharpe": -0.5222590146069844,
+        "max_dd": -0.043258423092660814,
+        "total_return": -0.025593053244137964
+      },
+      "dev": {
+        "ann_return": 0.010595685551765932,
+        "monthly_return": 0.0008787145662791929,
+        "ann_vol": 0.024835904100341512,
+        "sharpe": 0.43674147900150945,
+        "max_dd": -0.0370952713757432,
+        "total_return": 0.05605475066297938
+      },
+      "target": {
+        "oos_sharpe": -0.2617076879234862,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 1.1895072484080147,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -0.15338518672676973,
+        "frac_hold_sharpe_pos": 0.0
+      },
+      "approx_gross_pips_per_trade_oos_by_setting": {
+        "10.5": 1.160834990059622,
+        "11.0": 1.2679920477137205,
+        "11.5": 1.4918489065606626,
+        "12.0": 1.2904572564612635,
+        "12.5": 2.605765407554635,
+        "13.0": 2.574751491053662,
+        "13.5": 2.5497017892644505,
+        "14.0": 2.050597609561792,
+        "14.5": 2.3842629482071955,
+        "15.0": 2.195617529880499
+      },
+      "control_non_gotobi_oos_sharpe": -1.643698820708114,
+      "return_mc": {
+        "p05_ann_return": -0.019878312059992177,
+        "prob_loss_over_oos": 0.8079
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.2617076879234862,
+        "sr0_annual": 1.6720268621003371,
+        "n_trials": 23,
+        "dsr": 1.4208760556139694e-07
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    }
+  }
+}
