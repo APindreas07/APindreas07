@@ -4,7 +4,7 @@
 Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 
 ## Status
-- rounds_completed: 4 (round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
+- rounds_completed: 5 (round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
 - max_rounds: 30
 - candidate_in_forward_test: none
 - final_outcome: none yet
@@ -34,5 +34,8 @@ Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 | J1 | 4 | 7 majors + 21 crosses daily | Volatility-squeeze breakout, multi-day | -0.900 | no | edge/lab/r4/REPORT.md |
 | J2 | 4 | 9 Scandi/CEE daily | Bollinger mean reversion, multi-day | -0.760 | no | edge/lab/r4/REPORT.md |
 | J3 | 4 | 9 Scandi/CEE daily | Moving-average trend with stop | -1.010 | no | edge/lab/r4/REPORT.md |
+| K1 | 5 | 6 risk crosses daily + SPY | SPY-regime risk-currency trend | -0.840 | no | edge/lab/r5/REPORT.md |
+| K2 | 5 | 6 risk crosses daily + SPY | Rebound after equity stress | -0.100 | no | edge/lab/r5/REPORT.md |
+| K3 | 5 | G1 + G3 streams | Combination of round-2 near-misses | 0.240 | no (closest so far) | edge/lab/r5/REPORT.md |
 
-FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 16.
+FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 19.

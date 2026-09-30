@@ -1,0 +1,296 @@
+{
+  "first": "2006-10-09",
+  "last": "2026-09-25",
+  "n_trials_for_dsr": 19,
+  "hypotheses": {
+    "K1": {
+      "name": "Equity-regime risk-currency trend (SPY SMA filter)",
+      "chosen_params": {
+        "2017": [
+          250,
+          0.02,
+          1
+        ],
+        "2018": [
+          50,
+          0.0,
+          1
+        ],
+        "2019": [
+          50,
+          0.0,
+          1
+        ],
+        "2020": [
+          50,
+          0.0,
+          1
+        ],
+        "2021": [
+          200,
+          0.01,
+          1
+        ],
+        "2022": [
+          200,
+          0.01,
+          1
+        ],
+        "2023": [
+          250,
+          0.01,
+          1
+        ],
+        "2024": [
+          250,
+          0.01,
+          0
+        ],
+        "2025": [
+          100,
+          0.02,
+          1
+        ],
+        "2026": [
+          100,
+          0.02,
+          1
+        ]
+      },
+      "dev": {
+        "ann_return": -0.02864985136319609,
+        "monthly_return": -0.0024194242534752997,
+        "ann_vol": 0.07144753063109109,
+        "sharpe": -0.3710875737954514,
+        "max_dd": -0.3727728013610072,
+        "total_return": -0.23611871938892015
+      },
+      "oos": {
+        "ann_return": -0.07300117125341254,
+        "monthly_return": -0.006297004980977627,
+        "ann_vol": 0.08605765150971743,
+        "sharpe": -0.8376674776363887,
+        "max_dd": -0.4360184165014944,
+        "total_return": -0.42054143006209055
+      },
+      "holdout": {
+        "ann_return": -0.022180393305113566,
+        "monthly_return": -0.0018674272832727157,
+        "ann_vol": 0.08446937414538414,
+        "sharpe": -0.22329676892325284,
+        "max_dd": -0.17618324107464767,
+        "total_return": -0.061574572521953974
+      },
+      "target": {
+        "oos_sharpe": -0.8376674776363887,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 0.19110777757397468,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -0.8045367851696339,
+        "frac_hold_sharpe_pos": 0.0,
+        "frac_dev_sharpe_pos": 0.0
+      },
+      "return_mc": {
+        "p05_ann_return": -0.12039448399808987,
+        "median_ann_return": -0.07329793872319626,
+        "prob_loss_over_oos": 0.9923
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.8376674776363887,
+        "sr0_annual": 1.617834200095039,
+        "n_trials": 19,
+        "dsr": 2.1093244756697913e-11
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "K2": {
+      "name": "Rebound after equity stress (risk basket)",
+      "chosen_params": {
+        "2017": [
+          10,
+          0.05,
+          40
+        ],
+        "2018": [
+          10,
+          0.05,
+          40
+        ],
+        "2019": [
+          10,
+          0.05,
+          40
+        ],
+        "2020": [
+          3,
+          0.08,
+          40
+        ],
+        "2021": [
+          10,
+          0.03,
+          10
+        ],
+        "2022": [
+          3,
+          0.03,
+          20
+        ],
+        "2023": [
+          10,
+          0.03,
+          10
+        ],
+        "2024": [
+          3,
+          0.03,
+          40
+        ],
+        "2025": [
+          5,
+          0.03,
+          10
+        ],
+        "2026": [
+          5,
+          0.03,
+          10
+        ]
+      },
+      "dev": {
+        "ann_return": -0.003962312273274038,
+        "monthly_return": -0.00033079386150536294,
+        "ann_vol": 0.03982081564759542,
+        "sharpe": -0.07964050291797357,
+        "max_dd": -0.10667255778153706,
+        "total_return": -0.036118783930884746
+      },
+      "oos": {
+        "ann_return": -0.004143888410547247,
+        "monthly_return": -0.0003459816436630625,
+        "ann_vol": 0.03485512166813562,
+        "sharpe": -0.10169933815970329,
+        "max_dd": -0.1042736153857543,
+        "total_return": -0.029449065608492697
+      },
+      "holdout": {
+        "ann_return": 0.002581516898027436,
+        "monthly_return": 0.0002148722906447631,
+        "ann_vol": 0.03736412964093718,
+        "sharpe": 0.08771529292608964,
+        "max_dd": -0.057646491228854124,
+        "total_return": 0.007331618773055215
+      },
+      "target": {
+        "oos_sharpe": -0.10169933815970329,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 0.9572171259704925,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0738,
+        "median_oos_sharpe": -0.4661516749758107,
+        "frac_hold_sharpe_pos": 0.7842,
+        "frac_dev_sharpe_pos": 0.3687
+      },
+      "return_mc": {
+        "p05_ann_return": -0.027279553838743868,
+        "median_ann_return": -0.0044655822023269825,
+        "prob_loss_over_oos": 0.6231
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.10169933815970329,
+        "sr0_annual": 1.617834200095039,
+        "n_trials": 19,
+        "dsr": 1.9070179069637931e-06
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "K3": {
+      "name": "Combination of round-2 near-misses G1 + G3",
+      "chosen_params": "as edge/fx2 walk-forward",
+      "dev": {
+        "ann_return": 0.02899450146059057,
+        "monthly_return": 0.0023846816127650605,
+        "ann_vol": 0.05622909924390042,
+        "sharpe": 0.5363956064516545,
+        "max_dd": -0.09204349719066685,
+        "total_return": 0.3032201394234104
+      },
+      "oos": {
+        "ann_return": 0.012873582108868797,
+        "monthly_return": 0.0010665201560633442,
+        "ann_vol": 0.06230921659307174,
+        "sharpe": 0.23644520429974705,
+        "max_dd": -0.11927994881552173,
+        "total_return": 0.0964502695626206
+      },
+      "holdout": {
+        "ann_return": -0.027398578102361126,
+        "monthly_return": -0.0023123988651643224,
+        "ann_vol": 0.0628017886875138,
+        "sharpe": -0.4110901499067665,
+        "max_dd": -0.1676586891877423,
+        "total_return": -0.07569447201056922
+      },
+      "target": {
+        "oos_sharpe": 0.23644520429974705,
+        "leverage_for_2pct_month": 50.0,
+        "max_dd_at_that_leverage": -1.0000597390695063,
+        "leverage_within_limits": 0.8304698979623873,
+        "monthly_return_within_limits": 0.0009084380132360348,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.6757,
+        "median_oos_sharpe": 0.19280228216782924,
+        "frac_hold_sharpe_pos": 0.425,
+        "frac_dev_sharpe_pos": 0.7791
+      },
+      "return_mc": {
+        "p05_ann_return": -0.028788513125256893,
+        "median_ann_return": 0.013355345589500082,
+        "prob_loss_over_oos": 0.2978
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": 0.23644520429974705,
+        "sr0_annual": 1.617834200095039,
+        "n_trials": 19,
+        "dsr": 0.00010782438109833635
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": true,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    }
+  },
+  "validated": []
+}
