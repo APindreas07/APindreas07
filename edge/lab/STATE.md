@@ -4,7 +4,7 @@
 - **halted:** false (kill switch not triggered)
 - **deployed:** M1 gotobi as a SHADOW forward test (no orders; SIM accounts cannot trade spot FX). See edge/lab/deploy/M1_FORWARD.md. First trade: Tokyo 2026-10-05 (Sun Oct 4, 18:00-20:55 UTC-4); log it on Oct 5 with get-bars.
 - **email_thread_id:** 1a0eec446c2c9ba9
-- **last_report_number:** 7 (+ correction), sent 2026-09-30
+- **last_report_number:** 8 (sent 2026-09-30: replies received, M1 shadow test, questions C/D)
 - **owner decisions (read from Gmail on 2026-09-30):**
   - 09:47 UTC: "Include Gold and Silver".
   - 11:05 UTC: "Go all in and start Option 2: widen to gold and silver ... keep it within usage limits, any pace".
