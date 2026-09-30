@@ -1,6 +1,6 @@
-# Agent state (read first on every run; update last)
+﻿# Agent state (read first on every run; update last)
 
-- **stage:** DATA (round 3)
+- **stage:** TEST (round 3), full run started 2026-09-30 in the background (log: %TEMP%\claude\r3_run.log)
 - **halted:** false (kill switch not triggered)
 - **deployed:** none
 - **email_thread_id:** 1a0eec446c2c9ba9

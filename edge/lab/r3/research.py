@@ -57,7 +57,7 @@ def load_pair(pair: str) -> pd.DataFrame:
     j = PAIRS.index(pair)
     df["ao"] = df["bo"] + TABLE[j] * PIP[j]
     df["ac"] = df["bc"] + TABLE[j] * PIP[j]
-    df = df[df.ts < LAST + pd.Timedelta(days=1)].drop_duplicates("ts").sort_values("ts").reset_index(drop=True)
+    df = df[df.ts < (LAST + pd.Timedelta(days=1)).tz_localize("UTC")].drop_duplicates("ts").sort_values("ts").reset_index(drop=True)
     df.to_pickle(c)
     return df
 
