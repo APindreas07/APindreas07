@@ -1,11 +1,12 @@
 ﻿# Agent state (read first on every run; update last)
 
-- **stage:** RESEARCH round 9 (FX + metals, slow pace); M1/M1b shadow forward test running
+- **stage:** TEST round 9 (P1: pooled ridge ML on 18 instruments); M1/M1b shadow test running
 - **halted:** false (kill switch not triggered)
 - **deployed:** M1 gotobi as a SHADOW forward test (no orders; SIM accounts cannot trade spot FX). See edge/lab/deploy/M1_FORWARD.md. First trade: Tokyo 2026-10-05 (Sun Oct 4, 18:00-20:55 UTC-4); log it on Oct 5 with get-bars.
 - **email_thread_id:** 1a0eec446c2c9ba9
 - **last_report_number:** 9 (sent 2026-09-30: round 8 + rollover-artifact correction)
 - **owner decisions (read from Gmail on 2026-09-30):**
+  - 20:45 UTC: "craft, develop, test and validate new strategies ... go over again all the currencies + gold & silver ... use every technology possibly ... let me know how it goes" -> round 9 = machine learning.
   - 09:47 UTC: "Include Gold and Silver".
   - 11:05 UTC: "Go all in and start Option 2: widen to gold and silver ... keep it within usage limits, any pace".
   - 16:58 UTC: "A: yes, B: 1 and 2", which means:
