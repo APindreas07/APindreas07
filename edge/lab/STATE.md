@@ -1,16 +1,22 @@
-﻿# Agent state (read first on every run; update last)
+# Agent state (read first on every run; update last)
 
-- **stage:** TEST (round 4), full run started (log: %TEMP%\claude\r4_run.log)
+- **stage:** RESEARCH (round 5)
 - **halted:** false (kill switch not triggered)
 - **deployed:** none
 - **email_thread_id:** 1a0eec446c2c9ba9
-- **last_report_number:** 3 (sent 2026-09-30, round 4 planned)
-- **next_action:**
-  1. Download HistData for the 9 Scandinavian/CEE pairs, 2012..2026-09-25: `python -m tools.histdata --pairs USDNOK USDSEK USDPLN USDHUF USDCZK EURNOK EURSEK EURPLN EURHUF --start 2012 --end 2026-09-25` (about 2 minutes).
-  2. Build daily 17:00-New-York bars and the 21 crosses.
-  3. Write `edge/lab/r4/research.py` (J1-J3 per the pre-registration; reuse the r3 stats, Monte Carlo and DSR code).
-  4. Check the engine against an explicit loop, run the tests, report, and email report #3.
+- **last_report_number:** 4 (sent 2026-09-30, round 4 results)
+- **next_action:** research round 5, at most 3 hypotheses. Ideas not yet tested:
+  - calendar flows beyond month-end: quarter-end and year-end rebalancing, pre-holiday behaviour;
+  - trend or mean reversion **conditioned on a risk regime** read from price data only (for example SPY
+    volatility or drawdown as the filter);
+  - a combined, equal-risk portfolio of the two round-2 near-misses (G1 cross mean reversion, G3 month-end flow)
+    as a **new trial**; its deflated Sharpe will be very demanding;
+  - **only if the owner agrees:** gold (XAUUSD), which trades on FX platforms and drove E5's gains. Asked in
+    report #4; wait for the owner's answer before using it.
+
+  Each hypothesis must state its expected gross edge per trade against cost before testing.
 - **notes:**
-  - Data: HistData 5-minute bars for the 7 majors, 2012..2026-09-25, are downloaded (`data/histdata/`,
-    git-ignored; manifest committed).
-  - The round-3 full run took about 65 minutes. The H4 path-dependent Monte Carlo is the slow part.
+  - Data available: HistData 5-minute bars for the 7 majors and the 9 Scandinavian/CEE pairs, 2012..2026-09-25.
+    Round 4 caches daily bars in `data/histdata/_cache/daily_r4.pkl`. Shared statistics are in
+    `edge/lab/common.py`.
+  - Rounds 3 and 4 showed the **gross** signals are about zero, so costs are not the main issue.
