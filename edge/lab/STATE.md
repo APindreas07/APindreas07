@@ -4,7 +4,7 @@
 - **halted:** false (kill switch not triggered)
 - **deployed:** none
 - **email_thread_id:** 1a0eec446c2c9ba9
-- **last_report_number:** 2 (sent 2026-09-30, round 3 results)
+- **last_report_number:** 3 (sent 2026-09-30, round 4 planned)
 - **next_action:**
   1. Download HistData for the 9 Scandinavian/CEE pairs, 2012..2026-09-25: `python -m tools.histdata --pairs USDNOK USDSEK USDPLN USDHUF USDCZK EURNOK EURSEK EURPLN EURHUF --start 2012 --end 2026-09-25` (about 2 minutes).
   2. Build daily 17:00-New-York bars and the 21 crosses.
