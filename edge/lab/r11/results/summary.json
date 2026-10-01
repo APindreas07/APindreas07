@@ -1,0 +1,199 @@
+{
+  "n_trials_for_dsr": 30,
+  "hypotheses": {
+    "R1": {
+      "name": "Time-series momentum, 18 instruments, real carry",
+      "chosen_params": {
+        "2017": [
+          260
+        ],
+        "2018": [
+          260
+        ],
+        "2019": [
+          60
+        ],
+        "2020": [
+          260
+        ],
+        "2021": [
+          260
+        ],
+        "2022": [
+          180
+        ],
+        "2023": [
+          260
+        ],
+        "2024": [
+          260
+        ],
+        "2025": [
+          260
+        ],
+        "2026": [
+          120
+        ]
+      },
+      "oos": {
+        "ann_return": -0.03455892033101515,
+        "monthly_return": -0.0029265596420312567,
+        "ann_vol": 0.05032677824402386,
+        "sharpe": -0.6736427166816613,
+        "max_dd": -0.2376530453756469,
+        "total_return": -0.22214546696117532
+      },
+      "holdout": {
+        "ann_return": -0.028393198570570766,
+        "monthly_return": -0.002397461624084718,
+        "ann_vol": 0.04732797412334857,
+        "sharpe": -0.5849323821831196,
+        "max_dd": -0.10712367624249874,
+        "total_return": -0.07742153285793196
+      },
+      "dev": {
+        "ann_return": 0.004925107038130205,
+        "monthly_return": 0.00040950202091871724,
+        "ann_vol": 0.044706707101570875,
+        "sharpe": 0.1322159262726362,
+        "max_dd": -0.06944042883152035,
+        "total_return": 0.015224206405776597
+      },
+      "target": {
+        "oos_sharpe": -0.6736427166816613,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 0.3960810883104374,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0,
+        "median_oos_sharpe": -0.44060256789732144,
+        "frac_hold_sharpe_pos": 0.0709,
+        "frac_dev_sharpe_pos": 0.3708
+      },
+      "return_mc": {
+        "p05_ann_return": -0.06404450808489796,
+        "prob_loss_over_oos": 0.9657
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.6736427166816613,
+        "sr0_annual": 1.6045438363478974,
+        "n_trials": 30,
+        "dsr": 6.805886432517845e-10
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": true,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    },
+    "R2": {
+      "name": "Cross-sectional momentum, 18 instruments, real carry",
+      "chosen_params": {
+        "2017": [
+          260,
+          6
+        ],
+        "2018": [
+          120,
+          2
+        ],
+        "2019": [
+          60,
+          6
+        ],
+        "2020": [
+          120,
+          2
+        ],
+        "2021": [
+          20,
+          2
+        ],
+        "2022": [
+          260,
+          2
+        ],
+        "2023": [
+          260,
+          2
+        ],
+        "2024": [
+          260,
+          4
+        ],
+        "2025": [
+          260,
+          4
+        ],
+        "2026": [
+          60,
+          2
+        ]
+      },
+      "oos": {
+        "ann_return": -0.01653262041526593,
+        "monthly_return": -0.0013882695764200204,
+        "ann_vol": 0.02243968121514058,
+        "sharpe": -0.7316771726253098,
+        "max_dd": -0.12718396363285145,
+        "total_return": -0.11226074413766673
+      },
+      "holdout": {
+        "ann_return": -0.008297093857074556,
+        "monthly_return": -0.0006940678840902104,
+        "ann_vol": 0.024407199864547927,
+        "sharpe": -0.3291664991076705,
+        "max_dd": -0.04724883523703294,
+        "total_return": -0.023039385382862987
+      },
+      "dev": {
+        "ann_return": -0.000895276038316406,
+        "monthly_return": -7.463696762821659e-05,
+        "ann_vol": 0.021147436502853834,
+        "sharpe": -0.031795711619430546,
+        "max_dd": -0.04088843496026462,
+        "total_return": -0.002750771991229084
+      },
+      "target": {
+        "oos_sharpe": -0.7316771726253098,
+        "leverage_for_2pct_month": null,
+        "max_dd_at_that_leverage": null,
+        "leverage_within_limits": 0.7767667011617803,
+        "monthly_return_within_limits": null,
+        "target_reachable": false
+      },
+      "param_mc": {
+        "frac_oos_sharpe_pos": 0.0123,
+        "median_oos_sharpe": -0.33864943307808576,
+        "frac_hold_sharpe_pos": 0.195,
+        "frac_dev_sharpe_pos": 0.6876
+      },
+      "return_mc": {
+        "p05_ann_return": -0.03038650411279854,
+        "prob_loss_over_oos": 0.9825
+      },
+      "deflated_sharpe": {
+        "sharpe_annual": -0.7316771726253098,
+        "sr0_annual": 1.6045438363478974,
+        "n_trials": 30,
+        "dsr": 2.1938661163848261e-10
+      },
+      "criteria": {
+        "c1_oos_sharpe>=0.3_and_ret>0": false,
+        "c2_param_mc_>=60%_pos_and_median>0": false,
+        "c3_return_mc_prob_loss<20%": false,
+        "c4_dev_sharpe>0": false,
+        "c5_2pct_month_within_limits": false,
+        "c6_deflated_sharpe>=0.95": false
+      },
+      "validated": false
+    }
+  }
+}

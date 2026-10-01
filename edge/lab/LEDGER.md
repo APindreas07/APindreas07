@@ -4,7 +4,7 @@
 Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 
 ## Status
-- rounds_completed: 10 (round 10 = edge/lab/r10; round 9 = edge/lab/r9; round 8 = edge/lab/r8; round 7 = edge/lab/r7; round 6 = edge/lab/r6; round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
+- rounds_completed: 11 (round 11 = edge/lab/r11; round 10 = edge/lab/r10; round 9 = edge/lab/r9; round 8 = edge/lab/r8; round 7 = edge/lab/r7; round 6 = edge/lab/r6; round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
 - max_rounds: 30
 - candidate_in_forward_test: none
 - final_outcome: none yet
@@ -46,5 +46,7 @@ Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 | N3 | 8 | XAUUSD/XAGUSD daily | Gold/silver ratio mean reversion | -0.360 | no | edge/lab/r8/REPORT.md |
 | P1 | 9 | 18 instruments daily | Pooled ridge ML, 17 technical features | -0.880 | no (gross 0.39 before costs/swap) | edge/lab/r9/REPORT.md |
 | Q1 | 10 | 18 instruments daily | P1 with real carry (OECD rates) | -0.500 | no | edge/lab/r10/REPORT.md |
+| R1 | 11 | 18 instruments weekly | Time-series momentum, real carry | -0.670 | no | edge/lab/r11/REPORT.md |
+| R2 | 11 | 18 instruments weekly | Cross-sectional momentum, real carry | -0.730 | no | edge/lab/r11/REPORT.md |
 
-FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 28. NOTE (post-hoc): the M1 row's 0.703 is inflated by the rollover artifact (see edge/lab/r8/REPORT.md).
+FX trial count for the DSR = the number of FX rows (F*, G* and every later FX row). Currently: 30. NOTE (post-hoc): the M1 row's 0.703 is inflated by the rollover artifact (see edge/lab/r8/REPORT.md).
