@@ -7,7 +7,7 @@ Deflated Sharpe Ratio (`edge/lab/dsr.py`). Never delete or edit a past row.
 - rounds_completed: 11 (round 11 = edge/lab/r11; round 10 = edge/lab/r10; round 9 = edge/lab/r9; round 8 = edge/lab/r8; round 7 = edge/lab/r7; round 6 = edge/lab/r6; round 5 = edge/lab/r5; round 1 = edge/fx, round 2 = edge/fx2, round 3 = edge/lab/r3, round 4 = edge/lab/r4; the pre-lab study in edge/ is listed below too)
 - max_rounds: 30
 - candidate_in_forward_test: none
-- final_outcome: none yet
+- final_outcome: STOPPED BY OWNER after 11 rounds, no validated strategy (see edge/lab/FINAL.md)
 
 ## Trials so far (one row per hypothesis family; OOS = walk-forward 2017-2023 net Sharpe unless noted)
 | id | round | market | hypothesis | OOS Sharpe | validated | report |

@@ -1,10 +1,10 @@
 ﻿# Agent state (read first on every run; update last)
 
-- **stage:** RESEARCH round 12 (slow pace); M1/M1b shadow test running
-- **halted:** false (kill switch not triggered)
-- **deployed:** M1 gotobi as a SHADOW forward test (no orders; SIM accounts cannot trade spot FX). See edge/lab/deploy/M1_FORWARD.md. First trade: Tokyo 2026-10-05 (Sun Oct 4, 18:00-20:55 UTC-4); log it on Oct 5 with get-bars.
+- **stage:** STOPPED BY OWNER (2026-10-01 10:04 UTC: "do 1 now, give the final report, and stop everything till i decide"). Do nothing until the owner gives new instructions.
+- **halted:** true (owner stop, not the kill switch)
+- **deployed:** none. The M1/M1b shadow test is PAUSED (no trades logged).
 - **email_thread_id:** 1a0eec446c2c9ba9
-- **last_report_number:** 12 (sent 2026-10-01: round 11 momentum)
+- **last_report_number:** 13 (FINAL report sent 2026-10-01)
 - **owner decisions (read from Gmail on 2026-09-30):**
   - 20:45 UTC: "craft, develop, test and validate new strategies ... go over again all the currencies + gold & silver ... use every technology possibly ... let me know how it goes" -> round 9 = machine learning.
   - 09:47 UTC: "Include Gold and Silver".
